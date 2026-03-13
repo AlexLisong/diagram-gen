@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; padding: 3rem; color: #e2e8f0; }
+    .container { max-width: 960px; margin: 0 auto; }
+    h1 { text-align: center; font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem;
+          background: linear-gradient(135deg, #22d3ee, #6366f1);
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .comparison { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: stretch; }
+    .side { padding: 2rem; border-radius: 16px; backdrop-filter: blur(10px); }
+    .side h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; padding-bottom: 0.6rem; }
+    .side ul { list-style: none; }
+    .side li { padding: 0.7rem 0; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .side li::before { display: inline-block; width: 1.8rem; font-weight: 700; }
+    .left { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); }
+    .left h2 { color: #f87171; border-bottom: 2px solid #ef4444; }
+    .left li::before { content: "✗ "; color: #f87171; }
+    .right { background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.2); }
+    .right h2 { color: #4ade80; border-bottom: 2px solid #22c55e; }
+    .right li::before { content: "✓ "; color: #4ade80; }
+    .arrow { display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #6366f1; }
+    .notes { margin-top: 2.5rem; padding: 1.8rem; border-radius: 16px;
+              background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2);
+              border-left: 4px solid #6366f1; }
+    .notes h3 { color: #a5b4fc; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+    .notes ul { list-style: none; }
+    .notes li { font-size: 0.95rem; padding: 0.4rem 0; color: #94a3b8; }
+    .notes li::before { content: "→ "; color: #6366f1; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manual vs AI-Assisted Video Prep</h1>
+    <div class="comparison">
+      <div class="side left">
+        <h2>Before (Manual)</h2>
+        <ul>
+        <li>Read entire repo manually (2-4 hours)</li>
+        <li>Write slide deck from scratch (3-5 hours)</li>
+        <li>Draw diagrams in Figma/PPT (1-2 hours)</li>
+        <li>Write script manually (2-3 hours)</li>
+        <li>No fact-checking against source</li>
+        <li>Inconsistent quality across videos</li>
+        </ul>
+      </div>
+      <div class="arrow">→</div>
+      <div class="side right">
+        <h2>After (Content OS)</h2>
+        <ul>
+        <li>Auto-ingest repo + cloud (minutes)</li>
+        <li>Auto-generate slide outline + draft</li>
+        <li>Auto-generate verified diagrams</li>
+        <li>Auto-generate teleprompter script</li>
+        <li>Every claim traced to source code</li>
+        <li>Consistent structure + quality</li>
+        </ul>
+      </div>
+    </div>
+    <div class="notes">
+      <h3>Key Improvements</h3>
+      <ul>
+        <li>10x faster prep time: 8-14 hours → under 1 hour</li>
+        <li>Every diagram is deterministic and editable</li>
+        <li>Every claim is source-verified, not hallucinated</li>
+        <li>System scales to any repo, not just ones you know well</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

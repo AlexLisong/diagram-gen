@@ -1,0 +1,136 @@
+{
+  "diagram_type": "deployment",
+  "title": "Tapp \u2014 Azure Deployment",
+  "direction": "TB",
+  "nodes": [
+    {
+      "id": "vercel",
+      "label": "Vercel",
+      "type": "app_service",
+      "group": "frontend",
+      "metadata": {}
+    },
+    {
+      "id": "react_app",
+      "label": "React SPA",
+      "type": "frontend",
+      "group": "frontend",
+      "metadata": {}
+    },
+    {
+      "id": "app_svc",
+      "label": "App Service",
+      "type": "app_service",
+      "group": "azure",
+      "metadata": {}
+    },
+    {
+      "id": "dotnet",
+      "label": ".NET API",
+      "type": "api",
+      "group": "azure",
+      "metadata": {}
+    },
+    {
+      "id": "vm",
+      "label": "Linux VM",
+      "type": "vm",
+      "group": "azure",
+      "metadata": {}
+    },
+    {
+      "id": "python_svc",
+      "label": "FastAPI Agent",
+      "type": "ai_service",
+      "group": "azure",
+      "metadata": {}
+    },
+    {
+      "id": "sql",
+      "label": "Azure SQL",
+      "type": "database",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "redis",
+      "label": "Azure Redis",
+      "type": "redis",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "blob",
+      "label": "Blob Storage",
+      "type": "s3",
+      "group": "data",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "vercel",
+      "to": "react_app",
+      "label": "hosts",
+      "type": "deploys_to"
+    },
+    {
+      "from": "react_app",
+      "to": "dotnet",
+      "label": "REST",
+      "type": "http"
+    },
+    {
+      "from": "app_svc",
+      "to": "dotnet",
+      "label": "runs",
+      "type": "deploys_to"
+    },
+    {
+      "from": "vm",
+      "to": "python_svc",
+      "label": "runs",
+      "type": "deploys_to"
+    },
+    {
+      "from": "dotnet",
+      "to": "python_svc",
+      "label": "HTTP",
+      "type": "internal_http"
+    },
+    {
+      "from": "dotnet",
+      "to": "sql",
+      "label": "SQL",
+      "type": "reads"
+    },
+    {
+      "from": "dotnet",
+      "to": "redis",
+      "label": "Cache",
+      "type": "reads"
+    },
+    {
+      "from": "dotnet",
+      "to": "blob",
+      "label": "Files",
+      "type": "stores_in"
+    }
+  ],
+  "groups": [
+    {
+      "id": "frontend",
+      "label": "Frontend - Vercel"
+    },
+    {
+      "id": "azure",
+      "label": "Azure Compute"
+    },
+    {
+      "id": "data",
+      "label": "Azure Data"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

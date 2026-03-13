@@ -1,0 +1,124 @@
+{
+  "diagram_type": "high_level_architecture",
+  "title": "Content OS High-Level Architecture",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "ingestion",
+      "label": "Ingestion"
+    },
+    {
+      "id": "planning",
+      "label": "Planning"
+    },
+    {
+      "id": "generation",
+      "label": "Generation"
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ingestor",
+      "label": "Ingestion",
+      "type": "service",
+      "group": "ingestion",
+      "metadata": {}
+    },
+    {
+      "id": "graph",
+      "label": "Graph Builder",
+      "type": "service",
+      "group": "planning",
+      "metadata": {}
+    },
+    {
+      "id": "planner",
+      "label": "Planner",
+      "type": "ai_service",
+      "group": "planning",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Slide Generator",
+      "type": "service",
+      "group": "generation",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Script Writer",
+      "type": "service",
+      "group": "generation",
+      "metadata": {}
+    },
+    {
+      "id": "verifier",
+      "label": "Verifier",
+      "type": "verifier",
+      "group": "generation",
+      "metadata": {}
+    },
+    {
+      "id": "exporter",
+      "label": "Exporter",
+      "type": "output",
+      "group": "delivery",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "ingestor",
+      "to": "graph",
+      "label": "normalized data",
+      "type": "writes"
+    },
+    {
+      "from": "graph",
+      "to": "planner",
+      "label": "diagram spec",
+      "type": "calls"
+    },
+    {
+      "from": "planner",
+      "to": "slides",
+      "label": "slide plan",
+      "type": "calls"
+    },
+    {
+      "from": "planner",
+      "to": "script",
+      "label": "narrative plan",
+      "type": "calls"
+    },
+    {
+      "from": "slides",
+      "to": "verifier",
+      "label": "claims",
+      "type": "publishes"
+    },
+    {
+      "from": "script",
+      "to": "verifier",
+      "label": "facts",
+      "type": "publishes"
+    },
+    {
+      "from": "verifier",
+      "to": "exporter",
+      "label": "approved assets",
+      "type": "approves"
+    }
+  ],
+  "notes": [
+    "Phase 1 focus: small node count, clear handoffs, deterministic output."
+  ],
+  "source_refs": [
+    "synthetic:content_os_architecture"
+  ]
+}

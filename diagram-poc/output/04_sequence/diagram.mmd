@@ -1,0 +1,24 @@
+sequenceDiagram
+  actor user as User
+  participant fe as React Frontend
+  participant api as C-Sharp Backend
+  participant agent as Python Agent
+  participant llm as OpenAI
+
+  user ->> fe: Ask copilot question
+  fe ->> api: POST /api/copilot/chat
+  activate api
+  api ->> agent: Forward request
+  activate agent
+  agent ->> llm: Chat completion
+  activate llm
+  llm --) agent: Stream tokens
+  deactivate llm
+  agent -->> api: MetaEvent: tool_result
+  note right of api: Build MetaEvents from tool outputs
+  agent -->> api: MetaEvent: layout_card
+  deactivate agent
+  api -->> fe: SSE: CUSTOM event
+  deactivate api
+  fe -->> user: Render AI response
+  note right of user: Intercept and render cards

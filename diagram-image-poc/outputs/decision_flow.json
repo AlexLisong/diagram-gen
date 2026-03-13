@@ -1,0 +1,109 @@
+{
+  "diagram_type": "decision_flow",
+  "title": "Content OS Decision Flow",
+  "direction": "TB",
+  "groups": [
+    {
+      "id": "checks",
+      "label": "Checks"
+    },
+    {
+      "id": "actions",
+      "label": "Actions"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "docs_ready",
+      "label": "Docs complete?",
+      "type": "decision",
+      "group": "checks",
+      "metadata": {}
+    },
+    {
+      "id": "cloud_ready",
+      "label": "Cloud snapshot ready?",
+      "type": "decision",
+      "group": "checks",
+      "metadata": {}
+    },
+    {
+      "id": "draft",
+      "label": "Generate draft",
+      "type": "ai_service",
+      "group": "actions",
+      "metadata": {}
+    },
+    {
+      "id": "human_review",
+      "label": "Human review needed?",
+      "type": "decision",
+      "group": "checks",
+      "metadata": {}
+    },
+    {
+      "id": "request_input",
+      "label": "Request more input",
+      "type": "output",
+      "group": "actions",
+      "metadata": {}
+    },
+    {
+      "id": "publish",
+      "label": "Publish deck",
+      "type": "output",
+      "group": "actions",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "docs_ready",
+      "to": "cloud_ready",
+      "label": "yes",
+      "type": "branches"
+    },
+    {
+      "from": "docs_ready",
+      "to": "request_input",
+      "label": "no",
+      "type": "branches"
+    },
+    {
+      "from": "cloud_ready",
+      "to": "draft",
+      "label": "yes",
+      "type": "branches"
+    },
+    {
+      "from": "cloud_ready",
+      "to": "request_input",
+      "label": "no",
+      "type": "branches"
+    },
+    {
+      "from": "draft",
+      "to": "human_review",
+      "label": "confidence < 0.9",
+      "type": "branches"
+    },
+    {
+      "from": "human_review",
+      "to": "publish",
+      "label": "no",
+      "type": "branches"
+    },
+    {
+      "from": "human_review",
+      "to": "request_input",
+      "label": "yes",
+      "type": "branches"
+    }
+  ],
+  "notes": [
+    "Decision diagrams stay useful only when branches remain shallow and legible."
+  ],
+  "source_refs": [
+    "synthetic:decision_flow"
+  ]
+}

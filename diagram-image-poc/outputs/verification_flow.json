@@ -1,0 +1,133 @@
+{
+  "diagram_type": "verification_flow",
+  "title": "Verification and Evidence Flow",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "sources",
+      "label": "Sources"
+    },
+    {
+      "id": "verification",
+      "label": "Verification"
+    },
+    {
+      "id": "outputs",
+      "label": "Outputs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "repo",
+      "label": "Repo",
+      "type": "repo",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "docs",
+      "label": "Docs",
+      "type": "document",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud",
+      "type": "cloud",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "extract",
+      "label": "Evidence Extraction",
+      "type": "service",
+      "group": "verification",
+      "metadata": {}
+    },
+    {
+      "id": "claims",
+      "label": "Claim Builder",
+      "type": "service",
+      "group": "verification",
+      "metadata": {}
+    },
+    {
+      "id": "verify",
+      "label": "Verifier",
+      "type": "verifier",
+      "group": "verification",
+      "metadata": {}
+    },
+    {
+      "id": "review",
+      "label": "Human Review",
+      "type": "user",
+      "group": "verification",
+      "metadata": {}
+    },
+    {
+      "id": "approved",
+      "label": "Approved Output",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "repo",
+      "to": "extract",
+      "label": "facts",
+      "type": "reads"
+    },
+    {
+      "from": "docs",
+      "to": "extract",
+      "label": "facts",
+      "type": "reads"
+    },
+    {
+      "from": "cloud",
+      "to": "extract",
+      "label": "facts",
+      "type": "reads"
+    },
+    {
+      "from": "extract",
+      "to": "claims",
+      "label": "evidence",
+      "type": "writes"
+    },
+    {
+      "from": "claims",
+      "to": "verify",
+      "label": "claims",
+      "type": "calls"
+    },
+    {
+      "from": "verify",
+      "to": "review",
+      "label": "low confidence",
+      "type": "branches"
+    },
+    {
+      "from": "verify",
+      "to": "approved",
+      "label": "pass",
+      "type": "approves"
+    },
+    {
+      "from": "review",
+      "to": "approved",
+      "label": "approved",
+      "type": "approves"
+    }
+  ],
+  "notes": [
+    "This POC makes the anti-hallucination path explicit rather than implicit."
+  ],
+  "source_refs": [
+    "synthetic:verification_flow"
+  ]
+}

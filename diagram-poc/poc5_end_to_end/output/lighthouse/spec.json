@@ -1,0 +1,101 @@
+{
+  "diagram_type": "system_architecture",
+  "title": "Lighthouse Market Insight Engine",
+  "direction": "TB",
+  "nodes": [
+    {
+      "id": "ibkr",
+      "label": "Interactive Brokers",
+      "type": "external_api",
+      "group": "external",
+      "metadata": {}
+    },
+    {
+      "id": "fetcher",
+      "label": "Data Fetcher",
+      "type": "service",
+      "group": "pipeline",
+      "metadata": {}
+    },
+    {
+      "id": "pg",
+      "label": "PostgreSQL",
+      "type": "database",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "engine",
+      "label": "Trendline Engine",
+      "type": "ai_service",
+      "group": "pipeline",
+      "metadata": {}
+    },
+    {
+      "id": "backend",
+      "label": "C# Backend",
+      "type": "api",
+      "group": "app",
+      "metadata": {}
+    },
+    {
+      "id": "frontend",
+      "label": "Next.js Frontend",
+      "type": "frontend",
+      "group": "app",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "ibkr",
+      "to": "fetcher",
+      "label": "Market Data",
+      "type": "http"
+    },
+    {
+      "from": "fetcher",
+      "to": "pg",
+      "label": "Store",
+      "type": "writes"
+    },
+    {
+      "from": "pg",
+      "to": "engine",
+      "label": "Read",
+      "type": "reads"
+    },
+    {
+      "from": "engine",
+      "to": "backend",
+      "label": "Analysis",
+      "type": "internal_http"
+    },
+    {
+      "from": "backend",
+      "to": "frontend",
+      "label": "REST",
+      "type": "http"
+    }
+  ],
+  "groups": [
+    {
+      "id": "external",
+      "label": "External"
+    },
+    {
+      "id": "pipeline",
+      "label": "Data Pipeline"
+    },
+    {
+      "id": "data",
+      "label": "Storage"
+    },
+    {
+      "id": "app",
+      "label": "Application"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

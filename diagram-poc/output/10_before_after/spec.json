@@ -1,0 +1,32 @@
+{
+  "diagram_type": "before_after",
+  "title": "Manual vs AI-Assisted Video Prep",
+  "left": {
+    "title": "Before (Manual)",
+    "items": [
+      "Read entire repo manually (2-4 hours)",
+      "Write slide deck from scratch (3-5 hours)",
+      "Draw diagrams in Figma/PPT (1-2 hours)",
+      "Write script manually (2-3 hours)",
+      "No fact-checking against source",
+      "Inconsistent quality across videos"
+    ]
+  },
+  "right": {
+    "title": "After (Content OS)",
+    "items": [
+      "Auto-ingest repo + cloud (minutes)",
+      "Auto-generate slide outline + draft",
+      "Auto-generate verified diagrams",
+      "Auto-generate teleprompter script",
+      "Every claim traced to source code",
+      "Consistent structure + quality"
+    ]
+  },
+  "improvement_notes": [
+    "10x faster prep time: 8-14 hours \u2192 under 1 hour",
+    "Every diagram is deterministic and editable",
+    "Every claim is source-verified, not hallucinated",
+    "System scales to any repo, not just ones you know well"
+  ]
+}

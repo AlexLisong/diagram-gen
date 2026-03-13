@@ -1,0 +1,31 @@
+flowchart TB
+
+  subgraph sources[Input Sources]
+    repos>Git Repos]
+    docs>Docs / README]
+    cloud>Cloud Snapshot]
+  end
+
+  subgraph processing[Processing]
+    parser[[Code Parser]]
+    normalizer[[Entity Normalizer]]
+  end
+
+  subgraph storage[Storage]
+    graph_db[(Project Graph)]
+  end
+
+  subgraph outputs[Generated Assets]
+    slide_out([Slides])
+    script_out([Script])
+    diagram_out([Diagrams])
+  end
+
+  repos -->|Files| parser
+  docs -->|Text| parser
+  cloud -->|Resources| normalizer
+  parser -->|Raw Entities| normalizer
+  normalizer -->|Canonical| graph_db
+  graph_db -->|Outline| slide_out
+  graph_db -->|Talking Points| script_out
+  graph_db -->|DiagramSpec| diagram_out

@@ -1,0 +1,38 @@
+{
+  "graphic_type": "timeline",
+  "title": "Insight Graphics Rollout Timeline",
+  "subtitle": "A roadmap graphic for deck planning and delivery sequencing",
+  "theme": "executive",
+  "milestones": [
+    {
+      "period": "Week 1",
+      "label": "Primitive set",
+      "detail": "KPI, funnel, quadrant, timeline",
+      "status": "done"
+    },
+    {
+      "period": "Week 2",
+      "label": "Deck themes",
+      "detail": "Executive, newsroom, midnight",
+      "status": "done"
+    },
+    {
+      "period": "Week 3",
+      "label": "Story graphics",
+      "detail": "Pyramid, maturity ladder, scorecard",
+      "status": "active"
+    },
+    {
+      "period": "Week 4",
+      "label": "Slide integration",
+      "detail": "Export package for deck workflows",
+      "status": "next"
+    },
+    {
+      "period": "Week 5",
+      "label": "Narrative automation",
+      "detail": "Pair graphics with talking points",
+      "status": "next"
+    }
+  ]
+}

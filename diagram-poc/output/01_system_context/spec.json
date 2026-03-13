@@ -1,0 +1,114 @@
+{
+  "diagram_type": "system_context",
+  "title": "Content OS \u2014 System Context",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "creator",
+      "label": "Content Creator",
+      "type": "user",
+      "group": "actors",
+      "metadata": {}
+    },
+    {
+      "id": "system",
+      "label": "Content OS",
+      "type": "service",
+      "group": "core",
+      "metadata": {}
+    },
+    {
+      "id": "repos",
+      "label": "Git Repos",
+      "type": "storage",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Infra",
+      "type": "external_api",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Slide Deck",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Teleprompter",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "diagrams",
+      "label": "Diagrams",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "creator",
+      "to": "system",
+      "label": "Requests",
+      "type": "http"
+    },
+    {
+      "from": "repos",
+      "to": "system",
+      "label": "Source",
+      "type": "reads"
+    },
+    {
+      "from": "cloud",
+      "to": "system",
+      "label": "Infra Data",
+      "type": "reads"
+    },
+    {
+      "from": "system",
+      "to": "slides",
+      "label": "Generate",
+      "type": "produces"
+    },
+    {
+      "from": "system",
+      "to": "script",
+      "label": "Generate",
+      "type": "produces"
+    },
+    {
+      "from": "system",
+      "to": "diagrams",
+      "label": "Generate",
+      "type": "produces"
+    }
+  ],
+  "groups": [
+    {
+      "id": "actors",
+      "label": "Actors"
+    },
+    {
+      "id": "core",
+      "label": "System"
+    },
+    {
+      "id": "inputs",
+      "label": "Inputs"
+    },
+    {
+      "id": "outputs",
+      "label": "Outputs"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

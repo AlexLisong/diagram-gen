@@ -1,0 +1,133 @@
+{
+  "diagram_type": "system_context",
+  "title": "Content OS System Context",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "inputs",
+      "label": "Inputs"
+    },
+    {
+      "id": "system",
+      "label": "System"
+    },
+    {
+      "id": "outputs",
+      "label": "Outputs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "creator",
+      "label": "Creator",
+      "type": "user",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "repo",
+      "label": "Source Repo",
+      "type": "repo",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "docs",
+      "label": "Docs",
+      "type": "document",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Snapshot",
+      "type": "cloud",
+      "group": "inputs",
+      "metadata": {}
+    },
+    {
+      "id": "content_os",
+      "label": "Content OS",
+      "type": "ai_service",
+      "group": "system",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Slides",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Speaker Script",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "recording",
+      "label": "Recording Session",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "creator",
+      "to": "content_os",
+      "label": "brief",
+      "type": "http"
+    },
+    {
+      "from": "repo",
+      "to": "content_os",
+      "label": "code",
+      "type": "reads"
+    },
+    {
+      "from": "docs",
+      "to": "content_os",
+      "label": "context",
+      "type": "reads"
+    },
+    {
+      "from": "cloud",
+      "to": "content_os",
+      "label": "state",
+      "type": "reads"
+    },
+    {
+      "from": "content_os",
+      "to": "slides",
+      "label": "deck",
+      "type": "writes"
+    },
+    {
+      "from": "content_os",
+      "to": "script",
+      "label": "notes",
+      "type": "writes"
+    },
+    {
+      "from": "slides",
+      "to": "recording",
+      "label": "present",
+      "type": "triggers"
+    },
+    {
+      "from": "script",
+      "to": "recording",
+      "label": "narrate",
+      "type": "triggers"
+    }
+  ],
+  "notes": [
+    "System boundary is explicit: inputs on the left, generated artifacts on the right."
+  ],
+  "source_refs": [
+    "synthetic:content_os_context"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "diagram_type": "sequence",
+  "title": "AI Streaming Sequence \u2014 MetaEvent Flow",
+  "participants": [
+    {
+      "id": "user",
+      "label": "User",
+      "type": "actor"
+    },
+    {
+      "id": "fe",
+      "label": "React Frontend",
+      "type": "participant"
+    },
+    {
+      "id": "api",
+      "label": "C-Sharp Backend",
+      "type": "participant"
+    },
+    {
+      "id": "agent",
+      "label": "Python Agent",
+      "type": "participant"
+    },
+    {
+      "id": "llm",
+      "label": "OpenAI",
+      "type": "database"
+    }
+  ],
+  "steps": [
+    {
+      "from": "user",
+      "to": "fe",
+      "message": "Ask copilot question"
+    },
+    {
+      "from": "fe",
+      "to": "api",
+      "message": "POST /api/copilot/chat",
+      "activate": true
+    },
+    {
+      "from": "api",
+      "to": "agent",
+      "message": "Forward request",
+      "activate": true
+    },
+    {
+      "from": "agent",
+      "to": "llm",
+      "message": "Chat completion",
+      "activate": true
+    },
+    {
+      "from": "llm",
+      "to": "agent",
+      "message": "Stream tokens",
+      "style": "dashed",
+      "is_return": true,
+      "deactivate": true
+    },
+    {
+      "from": "agent",
+      "to": "api",
+      "message": "MetaEvent: tool_result",
+      "style": "dashed",
+      "note": "Build MetaEvents from tool outputs"
+    },
+    {
+      "from": "agent",
+      "to": "api",
+      "message": "MetaEvent: layout_card",
+      "style": "dashed",
+      "deactivate": true
+    },
+    {
+      "from": "api",
+      "to": "fe",
+      "message": "SSE: CUSTOM event",
+      "style": "dashed",
+      "deactivate": true
+    },
+    {
+      "from": "fe",
+      "to": "user",
+      "message": "Render AI response",
+      "style": "dashed",
+      "note": "Intercept and render cards"
+    }
+  ]
+}

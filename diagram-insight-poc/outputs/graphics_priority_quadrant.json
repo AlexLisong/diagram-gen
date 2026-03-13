@@ -1,0 +1,62 @@
+{
+  "graphic_type": "quadrant",
+  "title": "Presentation Graphics Priority Map",
+  "subtitle": "A 2x2 slide for prioritizing which visuals matter most",
+  "theme": "midnight",
+  "x_label": "Execution Effort",
+  "y_label": "Audience Impact",
+  "top_left_label": "Fast wins",
+  "top_right_label": "Strategic bets",
+  "bottom_left_label": "Low leverage",
+  "bottom_right_label": "Expensive distractions",
+  "points": [
+    {
+      "label": "KPI board",
+      "x": 28,
+      "y": 83,
+      "size": 4,
+      "note": "Opens the deck cleanly",
+      "accent": null
+    },
+    {
+      "label": "Quadrant map",
+      "x": 35,
+      "y": 72,
+      "size": 3,
+      "note": "Good for prioritization slides",
+      "accent": null
+    },
+    {
+      "label": "Scorecard",
+      "x": 52,
+      "y": 68,
+      "size": 3,
+      "note": "Useful in comparisons",
+      "accent": null
+    },
+    {
+      "label": "Annotated screenshots",
+      "x": 66,
+      "y": 78,
+      "size": 5,
+      "note": "High value, more manual polish",
+      "accent": null
+    },
+    {
+      "label": "Pyramid narrative",
+      "x": 31,
+      "y": 58,
+      "size": 2,
+      "note": "Good for strategy decks",
+      "accent": null
+    },
+    {
+      "label": "Radial infographic",
+      "x": 74,
+      "y": 42,
+      "size": 2,
+      "note": "More style than substance",
+      "accent": null
+    }
+  ]
+}

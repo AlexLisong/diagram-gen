@@ -1,0 +1,72 @@
+[
+  {
+    "name": "executive_kpi_board",
+    "graphic_type": "kpi_board",
+    "title": "AI Support Copilot - Executive Snapshot",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/executive_kpi_board.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/executive_kpi_board.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/executive_kpi_board.json",
+    "svg_sha256": "f47b637db20ad6f7c21a29cf72d16d896064b56a527cabec5001e5e3b9108b0e",
+    "html_sha256": "1e8bab9f73717a53889f704e78e29033f2474e94e8d1d770e97f159dab43c6bd"
+  },
+  {
+    "name": "repo_to_slide_funnel",
+    "graphic_type": "funnel",
+    "title": "Presentation Funnel - Repo to Approved Slide",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/repo_to_slide_funnel.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/repo_to_slide_funnel.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/repo_to_slide_funnel.json",
+    "svg_sha256": "2bb99b8d3b089074814afa8db1c3415b351f60885fdd13de1b5561948c2959d8",
+    "html_sha256": "24f689569179b5656819de55534801052eb8ece0cca494a06a690044caf50d64"
+  },
+  {
+    "name": "rollout_timeline",
+    "graphic_type": "timeline",
+    "title": "Insight Graphics Rollout Timeline",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/rollout_timeline.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/rollout_timeline.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/rollout_timeline.json",
+    "svg_sha256": "261087ab9bec8fa0b0e70c0926a59263094b4334b39617a54a68f5f95a87847e",
+    "html_sha256": "e94b1c8e1ff0539a4c6c533a0690931606fcbebda9a846ff4a078d19f3870949"
+  },
+  {
+    "name": "graphics_priority_quadrant",
+    "graphic_type": "quadrant",
+    "title": "Presentation Graphics Priority Map",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/graphics_priority_quadrant.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/graphics_priority_quadrant.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/graphics_priority_quadrant.json",
+    "svg_sha256": "c0be858bc2987e4bc346043eeba96b574136ad2e9d413b1a0a3c2c3723a567a2",
+    "html_sha256": "ab706b8cb1175120babe45fcbfeec1dc687c84b95de4213e10c17ff9fd75d8f6"
+  },
+  {
+    "name": "agentic_maturity_ladder",
+    "graphic_type": "maturity_ladder",
+    "title": "Manual to Agentic Presentation Maturity",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/agentic_maturity_ladder.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/agentic_maturity_ladder.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/agentic_maturity_ladder.json",
+    "svg_sha256": "a748d310207a67dc7ab9cdbe91d2f66112b0e209c501edb44eeff22e8e9c1211",
+    "html_sha256": "61aadbd08bc99e37efb096a0a263e21a4425d3470ee7fbbadba3d011d94cc8ca"
+  },
+  {
+    "name": "poc_scorecard",
+    "graphic_type": "scorecard",
+    "title": "POC Comparison Scorecard",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/poc_scorecard.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/poc_scorecard.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/poc_scorecard.json",
+    "svg_sha256": "3746a91bcef5b88c6ed1a0856b9590d8fe857ccfdd66be44bcbcf6366066222a",
+    "html_sha256": "04bee895e546f4b84e505b84dce70a9abf1b6d88d86111ae9aece65f405fdd6e"
+  },
+  {
+    "name": "story_pyramid",
+    "graphic_type": "pyramid",
+    "title": "Presentation Story Pyramid",
+    "svg_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/story_pyramid.svg",
+    "html_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/story_pyramid.html",
+    "json_path": "/Users/song/bon-git/diagram-gen/diagram-insight-poc/outputs/story_pyramid.json",
+    "svg_sha256": "ed7d49f49d3e2b3d8795102372a44eeba3e711d2321ce15392dbe36792de5281",
+    "html_sha256": "1fa59e127a460c25412b70da03a8e7ceb4f5114386e44c520b5551283bcb2f68"
+  }
+]

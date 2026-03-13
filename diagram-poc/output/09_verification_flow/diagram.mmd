@@ -1,0 +1,26 @@
+flowchart LR
+
+  subgraph evidence[Evidence Sources]
+    repo_src>Repo Source]
+    doc_src>Doc Source]
+    cloud_src>Cloud Source]
+  end
+
+  subgraph verify[Verification Pipeline]
+    extractor[Evidence Extractor]
+    claims[Claim Builder]
+    verifier{Fact Verifier}
+  end
+
+  subgraph output[Results]
+    approved([Approved Output])
+    flagged([Flagged for Review])
+  end
+
+  repo_src -->|Code| extractor
+  doc_src -->|Docs| extractor
+  cloud_src -->|Infra| extractor
+  extractor -->|Facts| claims
+  claims -->|Claims| verifier
+  verifier -->|Verified| approved
+  verifier -.->|Unverified| flagged

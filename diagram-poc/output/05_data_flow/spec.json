@@ -1,0 +1,140 @@
+{
+  "diagram_type": "data_flow",
+  "title": "Content OS \u2014 Data Pipeline",
+  "direction": "TB",
+  "nodes": [
+    {
+      "id": "repos",
+      "label": "Git Repos",
+      "type": "data_source",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "docs",
+      "label": "Docs / README",
+      "type": "data_source",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Snapshot",
+      "type": "data_source",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "parser",
+      "label": "Code Parser",
+      "type": "transform",
+      "group": "processing",
+      "metadata": {}
+    },
+    {
+      "id": "normalizer",
+      "label": "Entity Normalizer",
+      "type": "transform",
+      "group": "processing",
+      "metadata": {}
+    },
+    {
+      "id": "graph_db",
+      "label": "Project Graph",
+      "type": "database",
+      "group": "storage",
+      "metadata": {}
+    },
+    {
+      "id": "slide_out",
+      "label": "Slides",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "script_out",
+      "label": "Script",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    },
+    {
+      "id": "diagram_out",
+      "label": "Diagrams",
+      "type": "output",
+      "group": "outputs",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "repos",
+      "to": "parser",
+      "label": "Files",
+      "type": "feeds"
+    },
+    {
+      "from": "docs",
+      "to": "parser",
+      "label": "Text",
+      "type": "feeds"
+    },
+    {
+      "from": "cloud",
+      "to": "normalizer",
+      "label": "Resources",
+      "type": "feeds"
+    },
+    {
+      "from": "parser",
+      "to": "normalizer",
+      "label": "Raw Entities",
+      "type": "transforms"
+    },
+    {
+      "from": "normalizer",
+      "to": "graph_db",
+      "label": "Canonical",
+      "type": "writes"
+    },
+    {
+      "from": "graph_db",
+      "to": "slide_out",
+      "label": "Outline",
+      "type": "produces"
+    },
+    {
+      "from": "graph_db",
+      "to": "script_out",
+      "label": "Talking Points",
+      "type": "produces"
+    },
+    {
+      "from": "graph_db",
+      "to": "diagram_out",
+      "label": "DiagramSpec",
+      "type": "produces"
+    }
+  ],
+  "groups": [
+    {
+      "id": "sources",
+      "label": "Input Sources"
+    },
+    {
+      "id": "processing",
+      "label": "Processing"
+    },
+    {
+      "id": "storage",
+      "label": "Storage"
+    },
+    {
+      "id": "outputs",
+      "label": "Generated Assets"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

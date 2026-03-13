@@ -1,0 +1,28 @@
+{
+  "graphic_type": "pyramid",
+  "title": "Presentation Story Pyramid",
+  "subtitle": "A message hierarchy graphic for strategy and executive storytelling",
+  "theme": "executive",
+  "layers": [
+    {
+      "label": "Recommendation",
+      "detail": "What we should do next",
+      "accent": null
+    },
+    {
+      "label": "Insight",
+      "detail": "What the evidence means",
+      "accent": null
+    },
+    {
+      "label": "Evidence",
+      "detail": "What the system, metrics, and examples show",
+      "accent": null
+    },
+    {
+      "label": "Source Material",
+      "detail": "Repos, docs, tickets, and observations",
+      "accent": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+flowchart LR
+
+  subgraph actors[Actors]
+    creator(Content Creator)
+  end
+
+  subgraph core[System]
+    system[Content OS]
+  end
+
+  subgraph inputs[Inputs]
+    repos[(Git Repos)]
+    cloud>Cloud Infra]
+  end
+
+  subgraph outputs[Outputs]
+    slides([Slide Deck])
+    script([Teleprompter])
+    diagrams([Diagrams])
+  end
+
+  creator -->|Requests| system
+  repos -->|Source| system
+  cloud -->|Infra Data| system
+  system -->|Generate| slides
+  system -->|Generate| script
+  system -->|Generate| diagrams

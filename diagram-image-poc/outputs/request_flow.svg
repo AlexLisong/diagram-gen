@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1394" height="420" viewBox="0 0 1394 420">
+  <rect width="1394" height="420" fill="#f5f1ea" />
+  <text x="44" y="38" font-size="28" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Repo to Slides Request Flow</text>
+  <rect x="44" y="122" width="1306" height="126" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="60" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Primary Path</text>
+  <line x1="157" y1="228" x2="373" y2="160" stroke="#6b7280" stroke-width="2" />
+  <polygon points="373,160 366.45,166.17 364.09,158.70" fill="#6b7280" />
+  <text x="265.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">brief</text>
+  <line x1="373" y1="228" x2="589" y2="160" stroke="#6b7280" stroke-width="2" />
+  <polygon points="589,160 582.45,166.17 580.09,158.70" fill="#6b7280" />
+  <text x="481.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">outline</text>
+  <line x1="373" y1="228" x2="805" y2="160" stroke="#6b7280" stroke-width="2" />
+  <polygon points="805,160 797.60,165.13 796.39,157.39" fill="#6b7280" />
+  <text x="589.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">story beats</text>
+  <line x1="589" y1="228" x2="1021" y2="160" stroke="#6b7280" stroke-width="2" stroke-dasharray="2 6" />
+  <polygon points="1021,160 1013.60,165.13 1012.39,157.39" fill="#6b7280" />
+  <text x="805.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">draft slides</text>
+  <line x1="805" y1="228" x2="1021" y2="160" stroke="#6b7280" stroke-width="2" stroke-dasharray="2 6" />
+  <polygon points="1021,160 1014.45,166.17 1012.09,158.70" fill="#6b7280" />
+  <text x="913.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">draft script</text>
+  <line x1="1021" y1="228" x2="1237" y2="160" stroke="#6b7280" stroke-width="2" />
+  <polygon points="1237,160 1230.45,166.17 1228.09,158.70" fill="#6b7280" />
+  <text x="1129.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">approved</text>
+  <rect x="62" y="160" width="190" height="68" rx="14" fill="#fde6b8" stroke="#243447" stroke-width="2" />
+  <text x="76" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Select Repo</text>
+  <text x="76" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">user</text>
+  <rect x="278" y="160" width="190" height="68" rx="14" fill="#bddfd6" stroke="#243447" stroke-width="2" />
+  <text x="292" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Generate Outline</text>
+  <text x="292" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">ai service</text>
+  <rect x="494" y="160" width="190" height="68" rx="14" fill="#d5ecd2" stroke="#243447" stroke-width="2" />
+  <text x="508" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Generate Slides</text>
+  <text x="508" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">service</text>
+  <rect x="710" y="160" width="190" height="68" rx="14" fill="#d5ecd2" stroke="#243447" stroke-width="2" />
+  <text x="724" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Generate Script</text>
+  <text x="724" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">service</text>
+  <rect x="926" y="160" width="190" height="68" rx="14" fill="#d9ead3" stroke="#243447" stroke-width="2" />
+  <text x="940" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Review Output</text>
+  <text x="940" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">verifier</text>
+  <rect x="1142" y="160" width="190" height="68" rx="14" fill="#fce5cd" stroke="#243447" stroke-width="2" />
+  <text x="1156" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Export Deck</text>
+  <text x="1156" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">output</text>
+  <text x="44" y="406" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">Main path only. Async or retry branches belong in sequence or decision diagrams.</text>
+</svg>

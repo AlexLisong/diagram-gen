@@ -1,0 +1,167 @@
+{
+  "diagram_type": "decision_flow",
+  "title": "Content Generation \u2014 Decision Flow",
+  "direction": "TB",
+  "nodes": [
+    {
+      "id": "start",
+      "label": "Start",
+      "type": "start",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "has_repo",
+      "label": "Repo available?",
+      "type": "decision",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "scan_repo",
+      "label": "Scan Repo",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "manual_input",
+      "label": "Manual Input",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "has_docs",
+      "label": "Docs complete?",
+      "type": "decision",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "enrich",
+      "label": "Enrich with LLM",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "build_graph",
+      "label": "Build Graph",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "quality_ok",
+      "label": "Quality gate?",
+      "type": "gate",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "generate",
+      "label": "Generate Assets",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "review",
+      "label": "Human Review",
+      "type": "process",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "done",
+      "label": "Export",
+      "type": "end",
+      "group": null,
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "start",
+      "to": "has_repo",
+      "label": null,
+      "type": "next"
+    },
+    {
+      "from": "has_repo",
+      "to": "scan_repo",
+      "label": "Yes",
+      "type": "yes"
+    },
+    {
+      "from": "has_repo",
+      "to": "manual_input",
+      "label": "No",
+      "type": "no"
+    },
+    {
+      "from": "scan_repo",
+      "to": "has_docs",
+      "label": null,
+      "type": "next"
+    },
+    {
+      "from": "manual_input",
+      "to": "has_docs",
+      "label": null,
+      "type": "next"
+    },
+    {
+      "from": "has_docs",
+      "to": "build_graph",
+      "label": "Yes",
+      "type": "yes"
+    },
+    {
+      "from": "has_docs",
+      "to": "enrich",
+      "label": "No",
+      "type": "no"
+    },
+    {
+      "from": "enrich",
+      "to": "build_graph",
+      "label": null,
+      "type": "next"
+    },
+    {
+      "from": "build_graph",
+      "to": "quality_ok",
+      "label": null,
+      "type": "next"
+    },
+    {
+      "from": "quality_ok",
+      "to": "generate",
+      "label": "Pass",
+      "type": "yes"
+    },
+    {
+      "from": "quality_ok",
+      "to": "review",
+      "label": "Fail",
+      "type": "no"
+    },
+    {
+      "from": "review",
+      "to": "build_graph",
+      "label": "Retry",
+      "type": "fallback"
+    },
+    {
+      "from": "generate",
+      "to": "done",
+      "label": null,
+      "type": "next"
+    }
+  ],
+  "groups": [],
+  "legend": false,
+  "notes": []
+}

@@ -1,0 +1,31 @@
+---
+title: Repo to Slides Request Flow
+---
+flowchart TB
+  subgraph flow["Primary Path"]
+    select_repo([Select Repo])
+    outline[Generate Outline]
+    slides[Generate Slides]
+    script[Generate Script]
+    review[Review Output]
+    export[/Export Deck/]
+  end
+  select_repo -->|brief| outline
+  outline -->|outline| slides
+  outline -->|story beats| script
+  slides -.->|draft slides| review
+  script -.->|draft script| review
+  review -->|approved| export
+  class select_repo user
+  class outline ai
+  class slides service
+  class script service
+  class review verifier
+  class export output
+  classDef ai fill:#bddfd6,stroke:#2d6a68,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef service fill:#d5ecd2,stroke:#48724b,color:#1f2937
+  classDef user fill:#fde6b8,stroke:#8a6d3b,color:#1f2937
+  classDef verifier fill:#d9ead3,stroke:#4f7d43,color:#1f2937
+  %% Notes
+  %% Main path only. Async or retry branches belong in sequence or decision diagrams.

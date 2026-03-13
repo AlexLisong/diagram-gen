@@ -1,0 +1,27 @@
+flowchart TB
+
+  subgraph core[Core Libraries]
+    schemas[schemas/]
+    extractors[extractors/]
+    renderers[renderers/]
+    exporters[exporters/]
+  end
+
+  subgraph orchestration[Orchestration]
+    planners[planners/]
+    validators[validators/]
+    pipeline[pipeline.py]
+  end
+
+  subgraph tests[Test Scenarios]
+    scenarios[scenarios/]
+  end
+
+  pipeline -.->|uses| extractors
+  pipeline -.->|uses| planners
+  pipeline -.->|uses| validators
+  pipeline -.->|uses| renderers
+  pipeline -.->|uses| exporters
+  extractors -.->|imports| schemas
+  renderers -.->|imports| schemas
+  scenarios -->|tests| pipeline

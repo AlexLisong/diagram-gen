@@ -1,0 +1,42 @@
+---
+title: Content OS System Context
+---
+flowchart LR
+  subgraph inputs["Inputs"]
+    creator([Creator])
+    repo[Source Repo]
+    docs[Docs]
+    cloud[Cloud Snapshot]
+  end
+  subgraph system["System"]
+    content_os[Content OS]
+  end
+  subgraph outputs["Outputs"]
+    slides[/Slides/]
+    script[/Speaker Script/]
+    recording[/Recording Session/]
+  end
+  creator -->|brief| content_os
+  repo -->|code| content_os
+  docs -->|context| content_os
+  cloud -->|state| content_os
+  content_os -->|deck| slides
+  content_os -->|notes| script
+  slides -->|present| recording
+  script -->|narrate| recording
+  class creator user
+  class repo repo
+  class docs document
+  class cloud cloud
+  class content_os ai
+  class slides output
+  class script output
+  class recording output
+  classDef ai fill:#bddfd6,stroke:#2d6a68,color:#1f2937
+  classDef cloud fill:#d5e7ff,stroke:#4067a8,color:#1f2937
+  classDef document fill:#f6e8c3,stroke:#8a7750,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef repo fill:#d8d8d8,stroke:#5a5a5a,color:#1f2937
+  classDef user fill:#fde6b8,stroke:#8a6d3b,color:#1f2937
+  %% Notes
+  %% System boundary is explicit: inputs on the left, generated artifacts on the right.

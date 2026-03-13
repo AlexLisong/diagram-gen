@@ -1,0 +1,26 @@
+{
+  "diagram_type": "before_after",
+  "title": "Manual vs Agentic Video Prep",
+  "left": {
+    "title": "Before",
+    "items": [
+      "Read repo manually",
+      "Draft slides from scratch",
+      "Rewrite facts across docs and script"
+    ]
+  },
+  "right": {
+    "title": "After",
+    "items": [
+      "Ingest repo, docs, and cloud snapshot",
+      "Generate diagram-backed slide draft",
+      "Verify claims before export"
+    ]
+  },
+  "notes": [
+    "This renderer is HTML-first so it can be screenshotted into slides."
+  ],
+  "source_refs": [
+    "synthetic:before_after"
+  ]
+}

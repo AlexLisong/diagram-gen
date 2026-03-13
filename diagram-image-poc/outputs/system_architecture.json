@@ -1,0 +1,125 @@
+{
+  "diagram_type": "system_architecture",
+  "title": "AI Copilot System Architecture",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "user",
+      "label": "User",
+      "type": "user",
+      "group": "client",
+      "metadata": {}
+    },
+    {
+      "id": "frontend",
+      "label": "React Frontend",
+      "type": "frontend",
+      "group": "client",
+      "metadata": {}
+    },
+    {
+      "id": "api",
+      "label": "C# API",
+      "type": "api",
+      "group": "backend",
+      "metadata": {}
+    },
+    {
+      "id": "ai",
+      "label": "Python AI Service",
+      "type": "ai_service",
+      "group": "backend",
+      "metadata": {}
+    },
+    {
+      "id": "db",
+      "label": "Postgres",
+      "type": "database",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "storage",
+      "label": "Report Storage",
+      "type": "storage",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "vendor",
+      "label": "OpenAI API",
+      "type": "external_api",
+      "group": "external",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "user",
+      "to": "frontend",
+      "label": "browser",
+      "type": "http"
+    },
+    {
+      "from": "frontend",
+      "to": "api",
+      "label": "REST",
+      "type": "http"
+    },
+    {
+      "from": "api",
+      "to": "ai",
+      "label": "prompt",
+      "type": "internal_http"
+    },
+    {
+      "from": "ai",
+      "to": "vendor",
+      "label": "LLM",
+      "type": "http"
+    },
+    {
+      "from": "ai",
+      "to": "frontend",
+      "label": "SSE",
+      "type": "stream"
+    },
+    {
+      "from": "api",
+      "to": "db",
+      "label": "SQL",
+      "type": "writes"
+    },
+    {
+      "from": "api",
+      "to": "storage",
+      "label": "files",
+      "type": "stores_in"
+    }
+  ],
+  "groups": [
+    {
+      "id": "client",
+      "label": "Client"
+    },
+    {
+      "id": "backend",
+      "label": "Backend"
+    },
+    {
+      "id": "data",
+      "label": "Data"
+    },
+    {
+      "id": "external",
+      "label": "External"
+    }
+  ],
+  "notes": [
+    "Deterministic layout from constrained node and edge enums.",
+    "No LLM involved in rendering."
+  ],
+  "source_refs": [
+    "synthetic:architecture_demo"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "diagram_type": "module_structure",
+  "title": "Content OS \u2014 Module Structure",
+  "direction": "TB",
+  "nodes": [
+    {
+      "id": "schemas",
+      "label": "schemas/",
+      "type": "module",
+      "group": "core",
+      "metadata": {}
+    },
+    {
+      "id": "extractors",
+      "label": "extractors/",
+      "type": "module",
+      "group": "core",
+      "metadata": {}
+    },
+    {
+      "id": "renderers",
+      "label": "renderers/",
+      "type": "module",
+      "group": "core",
+      "metadata": {}
+    },
+    {
+      "id": "exporters",
+      "label": "exporters/",
+      "type": "module",
+      "group": "core",
+      "metadata": {}
+    },
+    {
+      "id": "planners",
+      "label": "planners/",
+      "type": "module",
+      "group": "orchestration",
+      "metadata": {}
+    },
+    {
+      "id": "validators",
+      "label": "validators/",
+      "type": "module",
+      "group": "orchestration",
+      "metadata": {}
+    },
+    {
+      "id": "pipeline",
+      "label": "pipeline.py",
+      "type": "module",
+      "group": "orchestration",
+      "metadata": {}
+    },
+    {
+      "id": "scenarios",
+      "label": "scenarios/",
+      "type": "module",
+      "group": "tests",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "pipeline",
+      "to": "extractors",
+      "label": "uses",
+      "type": "depends_on"
+    },
+    {
+      "from": "pipeline",
+      "to": "planners",
+      "label": "uses",
+      "type": "depends_on"
+    },
+    {
+      "from": "pipeline",
+      "to": "validators",
+      "label": "uses",
+      "type": "depends_on"
+    },
+    {
+      "from": "pipeline",
+      "to": "renderers",
+      "label": "uses",
+      "type": "depends_on"
+    },
+    {
+      "from": "pipeline",
+      "to": "exporters",
+      "label": "uses",
+      "type": "depends_on"
+    },
+    {
+      "from": "extractors",
+      "to": "schemas",
+      "label": "imports",
+      "type": "depends_on"
+    },
+    {
+      "from": "renderers",
+      "to": "schemas",
+      "label": "imports",
+      "type": "depends_on"
+    },
+    {
+      "from": "scenarios",
+      "to": "pipeline",
+      "label": "tests",
+      "type": "calls"
+    }
+  ],
+  "groups": [
+    {
+      "id": "core",
+      "label": "Core Libraries"
+    },
+    {
+      "id": "orchestration",
+      "label": "Orchestration"
+    },
+    {
+      "id": "tests",
+      "label": "Test Scenarios"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

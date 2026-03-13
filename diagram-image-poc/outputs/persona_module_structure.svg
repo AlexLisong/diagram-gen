@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1208" height="420" viewBox="0 0 1208 420">
+  <rect width="1208" height="420" fill="#f5f1ea" />
+  <text x="44" y="38" font-size="28" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">persona-16p Module Structure</text>
+  <rect x="44" y="122" width="226" height="220" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="60" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">App Runtime</text>
+  <rect x="342" y="122" width="226" height="126" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="358" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Core Logic</text>
+  <rect x="640" y="122" width="226" height="220" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="656" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Data Assets</text>
+  <rect x="938" y="122" width="226" height="126" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="954" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Ops</text>
+  <line x1="252" y1="194" x2="62" y2="288" stroke="#6b7280" stroke-width="2" stroke-dasharray="4 4" />
+  <polygon points="62,288 67.53,280.90 71.00,287.92" fill="#6b7280" />
+  <text x="157.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">renders</text>
+  <line x1="252" y1="194" x2="360" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="360,194 351.90,197.91 351.90,190.09" fill="#6b7280" />
+  <text x="306.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">uses</text>
+  <line x1="252" y1="194" x2="658" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="658,194 649.90,197.91 649.90,190.09" fill="#6b7280" />
+  <text x="455.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">reads</text>
+  <line x1="252" y1="194" x2="658" y2="288" stroke="#6b7280" stroke-width="2" />
+  <polygon points="658,288 649.22,289.99 650.99,282.36" fill="#6b7280" />
+  <text x="455.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">queries</text>
+  <line x1="252" y1="288" x2="360" y2="194" stroke="#6b7280" stroke-width="2" stroke-dasharray="4 4" />
+  <polygon points="360,194 356.46,202.27 351.32,196.37" fill="#6b7280" />
+  <text x="306.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">hooks</text>
+  <line x1="550" y1="194" x2="658" y2="288" stroke="#6b7280" stroke-width="2" />
+  <polygon points="658,288 649.32,285.63 654.46,279.73" fill="#6b7280" />
+  <text x="604.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">persists</text>
+  <line x1="956" y1="194" x2="848" y2="288" stroke="#6b7280" stroke-width="2" />
+  <polygon points="848,288 851.54,279.73 856.68,285.63" fill="#6b7280" />
+  <text x="902.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">seed</text>
+  <line x1="956" y1="194" x2="848" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="848,194 856.10,190.09 856.10,197.91" fill="#6b7280" />
+  <text x="902.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">loads</text>
+  <rect x="62" y="160" width="190" height="68" rx="14" fill="#f8d6b5" stroke="#243447" stroke-width="2" />
+  <text x="76" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">app</text>
+  <text x="76" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">frontend</text>
+  <rect x="62" y="254" width="190" height="68" rx="14" fill="#d7e8f2" stroke="#243447" stroke-width="2" />
+  <text x="76" y="280" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">components</text>
+  <text x="76" y="302" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">module</text>
+  <rect x="360" y="160" width="190" height="68" rx="14" fill="#d5ecd2" stroke="#243447" stroke-width="2" />
+  <text x="374" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">lib</text>
+  <text x="374" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">service</text>
+  <rect x="658" y="160" width="190" height="68" rx="14" fill="#fff0bf" stroke="#243447" stroke-width="2" />
+  <text x="672" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">data</text>
+  <text x="672" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">storage</text>
+  <rect x="658" y="254" width="190" height="68" rx="14" fill="#d9d2f5" stroke="#243447" stroke-width="2" />
+  <text x="672" y="280" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">db</text>
+  <text x="672" y="302" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">database</text>
+  <rect x="956" y="160" width="190" height="68" rx="14" fill="#dce7ef" stroke="#243447" stroke-width="2" />
+  <text x="970" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">scripts</text>
+  <text x="970" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">worker</text>
+  <text x="44" y="392" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">Rule-based extraction from top-level folders.</text>
+  <text x="44" y="406" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">Edges express convention-based dependencies, not full static analysis.</text>
+</svg>

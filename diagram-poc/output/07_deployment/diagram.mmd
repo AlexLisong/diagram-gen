@@ -1,0 +1,28 @@
+flowchart TB
+
+  subgraph frontend[Frontend - Vercel]
+    vercel[Vercel]
+    react_app(React SPA)
+  end
+
+  subgraph azure[Azure Compute]
+    app_svc[App Service]
+    dotnet[.NET API]
+    vm[Linux VM]
+    python_svc[FastAPI Agent]
+  end
+
+  subgraph data[Azure Data]
+    sql[(Azure SQL)]
+    redis[(Azure Redis)]
+    blob[(Blob Storage)]
+  end
+
+  vercel ==>|hosts| react_app
+  react_app -->|REST| dotnet
+  app_svc ==>|runs| dotnet
+  vm ==>|runs| python_svc
+  dotnet -->|HTTP| python_svc
+  dotnet -->|SQL| sql
+  dotnet -->|Cache| redis
+  dotnet -->|Files| blob

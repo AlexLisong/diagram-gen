@@ -1,0 +1,28 @@
+@startuml
+title AI Streaming Sequence — MetaEvent Flow
+
+actor "User" as user
+participant "React Frontend" as fe
+participant "C-Sharp Backend" as api
+participant "Python Agent" as agent
+database "OpenAI" as llm
+
+user -> fe: Ask copilot question
+fe -> api: POST /api/copilot/chat
+activate api
+api -> agent: Forward request
+activate agent
+agent -> llm: Chat completion
+activate llm
+agent <-- llm: Stream tokens
+deactivate agent
+agent --> api: MetaEvent: tool_result
+note right of api: Build MetaEvents from tool outputs
+agent --> api: MetaEvent: layout_card
+deactivate api
+api --> fe: SSE: CUSTOM event
+deactivate fe
+fe --> user: Render AI response
+note right of user: Intercept and render cards
+
+@enduml

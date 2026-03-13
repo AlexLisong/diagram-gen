@@ -1,0 +1,38 @@
+{
+  "graphic_type": "maturity_ladder",
+  "title": "Manual to Agentic Presentation Maturity",
+  "subtitle": "A transformation graphic for change-over-time storytelling",
+  "theme": "executive",
+  "stages": [
+    {
+      "level": "L1",
+      "label": "Manual",
+      "detail": "Analyst assembles raw slide content by hand",
+      "score": 1
+    },
+    {
+      "level": "L2",
+      "label": "Assisted",
+      "detail": "LLM drafts text and simple diagrams",
+      "score": 2
+    },
+    {
+      "level": "L3",
+      "label": "Repeatable",
+      "detail": "Reusable templates and canonical specs",
+      "score": 3
+    },
+    {
+      "level": "L4",
+      "label": "Adaptive",
+      "detail": "Graphics chosen from presentation intent",
+      "score": 4
+    },
+    {
+      "level": "L5",
+      "label": "Agentic",
+      "detail": "Slide stories generated with evidence and visuals",
+      "score": 5
+    }
+  ]
+}

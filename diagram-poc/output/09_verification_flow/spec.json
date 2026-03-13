@@ -1,0 +1,123 @@
+{
+  "diagram_type": "verification_flow",
+  "title": "Content Verification Pipeline",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "repo_src",
+      "label": "Repo Source",
+      "type": "data_source",
+      "group": "evidence",
+      "metadata": {}
+    },
+    {
+      "id": "doc_src",
+      "label": "Doc Source",
+      "type": "data_source",
+      "group": "evidence",
+      "metadata": {}
+    },
+    {
+      "id": "cloud_src",
+      "label": "Cloud Source",
+      "type": "data_source",
+      "group": "evidence",
+      "metadata": {}
+    },
+    {
+      "id": "extractor",
+      "label": "Evidence Extractor",
+      "type": "ai_service",
+      "group": "verify",
+      "metadata": {}
+    },
+    {
+      "id": "claims",
+      "label": "Claim Builder",
+      "type": "service",
+      "group": "verify",
+      "metadata": {}
+    },
+    {
+      "id": "verifier",
+      "label": "Fact Verifier",
+      "type": "gate",
+      "group": "verify",
+      "metadata": {}
+    },
+    {
+      "id": "approved",
+      "label": "Approved Output",
+      "type": "output",
+      "group": "output",
+      "metadata": {}
+    },
+    {
+      "id": "flagged",
+      "label": "Flagged for Review",
+      "type": "output",
+      "group": "output",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "repo_src",
+      "to": "extractor",
+      "label": "Code",
+      "type": "feeds"
+    },
+    {
+      "from": "doc_src",
+      "to": "extractor",
+      "label": "Docs",
+      "type": "feeds"
+    },
+    {
+      "from": "cloud_src",
+      "to": "extractor",
+      "label": "Infra",
+      "type": "feeds"
+    },
+    {
+      "from": "extractor",
+      "to": "claims",
+      "label": "Facts",
+      "type": "transforms"
+    },
+    {
+      "from": "claims",
+      "to": "verifier",
+      "label": "Claims",
+      "type": "next"
+    },
+    {
+      "from": "verifier",
+      "to": "approved",
+      "label": "Verified",
+      "type": "yes"
+    },
+    {
+      "from": "verifier",
+      "to": "flagged",
+      "label": "Unverified",
+      "type": "no"
+    }
+  ],
+  "groups": [
+    {
+      "id": "evidence",
+      "label": "Evidence Sources"
+    },
+    {
+      "id": "verify",
+      "label": "Verification Pipeline"
+    },
+    {
+      "id": "output",
+      "label": "Results"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

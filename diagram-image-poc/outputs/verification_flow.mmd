@@ -1,0 +1,43 @@
+---
+title: Verification and Evidence Flow
+---
+flowchart LR
+  subgraph sources["Sources"]
+    repo[Repo]
+    docs[Docs]
+    cloud[Cloud]
+  end
+  subgraph verification["Verification"]
+    extract[Evidence Extraction]
+    claims[Claim Builder]
+    verify[Verifier]
+    review([Human Review])
+  end
+  subgraph outputs["Outputs"]
+    approved[/Approved Output/]
+  end
+  repo -->|facts| extract
+  docs -->|facts| extract
+  cloud -->|facts| extract
+  extract -->|evidence| claims
+  claims -->|claims| verify
+  verify -.->|low confidence| review
+  verify -->|pass| approved
+  review -->|approved| approved
+  class repo repo
+  class docs document
+  class cloud cloud
+  class extract service
+  class claims service
+  class verify verifier
+  class review user
+  class approved output
+  classDef cloud fill:#d5e7ff,stroke:#4067a8,color:#1f2937
+  classDef document fill:#f6e8c3,stroke:#8a7750,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef repo fill:#d8d8d8,stroke:#5a5a5a,color:#1f2937
+  classDef service fill:#d5ecd2,stroke:#48724b,color:#1f2937
+  classDef user fill:#fde6b8,stroke:#8a6d3b,color:#1f2937
+  classDef verifier fill:#d9ead3,stroke:#4f7d43,color:#1f2937
+  %% Notes
+  %% This POC makes the anti-hallucination path explicit rather than implicit.

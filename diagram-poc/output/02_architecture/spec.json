@@ -1,0 +1,135 @@
+{
+  "diagram_type": "system_architecture",
+  "title": "Content OS \u2014 Architecture",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "ingestion",
+      "label": "Repo Ingestion",
+      "type": "service",
+      "group": "pipeline",
+      "metadata": {}
+    },
+    {
+      "id": "graph_builder",
+      "label": "Graph Builder",
+      "type": "ai_service",
+      "group": "pipeline",
+      "metadata": {}
+    },
+    {
+      "id": "planner",
+      "label": "Content Planner",
+      "type": "ai_service",
+      "group": "pipeline",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Slide Generator",
+      "type": "service",
+      "group": "generators",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Script Writer",
+      "type": "ai_service",
+      "group": "generators",
+      "metadata": {}
+    },
+    {
+      "id": "diagrams",
+      "label": "Diagram Engine",
+      "type": "service",
+      "group": "generators",
+      "metadata": {}
+    },
+    {
+      "id": "verifier",
+      "label": "Verifier",
+      "type": "gate",
+      "group": "quality",
+      "metadata": {}
+    },
+    {
+      "id": "exporter",
+      "label": "Exporter",
+      "type": "service",
+      "group": "quality",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "ingestion",
+      "to": "graph_builder",
+      "label": "Raw Data",
+      "type": "feeds"
+    },
+    {
+      "from": "graph_builder",
+      "to": "planner",
+      "label": "Graph",
+      "type": "feeds"
+    },
+    {
+      "from": "planner",
+      "to": "slides",
+      "label": "Outline",
+      "type": "calls"
+    },
+    {
+      "from": "planner",
+      "to": "script",
+      "label": "Outline",
+      "type": "calls"
+    },
+    {
+      "from": "planner",
+      "to": "diagrams",
+      "label": "Specs",
+      "type": "calls"
+    },
+    {
+      "from": "slides",
+      "to": "verifier",
+      "label": "Draft",
+      "type": "next"
+    },
+    {
+      "from": "script",
+      "to": "verifier",
+      "label": "Draft",
+      "type": "next"
+    },
+    {
+      "from": "diagrams",
+      "to": "verifier",
+      "label": "Images",
+      "type": "next"
+    },
+    {
+      "from": "verifier",
+      "to": "exporter",
+      "label": "Approved",
+      "type": "next"
+    }
+  ],
+  "groups": [
+    {
+      "id": "pipeline",
+      "label": "Ingestion Pipeline"
+    },
+    {
+      "id": "generators",
+      "label": "Content Generators"
+    },
+    {
+      "id": "quality",
+      "label": "Quality Gate"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

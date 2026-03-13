@@ -1,0 +1,39 @@
+---
+title: Content OS High-Level Architecture
+---
+flowchart LR
+  subgraph ingestion["Ingestion"]
+    ingestor[Ingestion]
+  end
+  subgraph planning["Planning"]
+    graph[Graph Builder]
+    planner[Planner]
+  end
+  subgraph generation["Generation"]
+    slides[Slide Generator]
+    script[Script Writer]
+    verifier[Verifier]
+  end
+  subgraph delivery["Delivery"]
+    exporter[/Exporter/]
+  end
+  ingestor -->|normalized data| graph
+  graph -->|diagram spec| planner
+  planner -->|slide plan| slides
+  planner -->|narrative plan| script
+  slides -.->|claims| verifier
+  script -.->|facts| verifier
+  verifier -->|approved assets| exporter
+  class ingestor service
+  class graph service
+  class planner ai
+  class slides service
+  class script service
+  class verifier verifier
+  class exporter output
+  classDef ai fill:#bddfd6,stroke:#2d6a68,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef service fill:#d5ecd2,stroke:#48724b,color:#1f2937
+  classDef verifier fill:#d9ead3,stroke:#4f7d43,color:#1f2937
+  %% Notes
+  %% Phase 1 focus: small node count, clear handoffs, deterministic output.

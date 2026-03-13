@@ -1,0 +1,40 @@
+---
+title: Content OS Data Flow
+---
+flowchart LR
+  subgraph sources["Sources"]
+    repo[Raw Repo Data]
+    docs[Raw Docs]
+    cloud[Cloud Snapshot]
+  end
+  subgraph processing["Processing"]
+    normalize[Normalized Graph]
+    diagram_specs[Diagram Specs]
+  end
+  subgraph artifacts["Artifacts"]
+    slides[/Slides/]
+    script[/Script/]
+    summary[/Evidence Summary/]
+  end
+  repo -->|extract| normalize
+  docs -->|extract| normalize
+  cloud -->|extract| normalize
+  normalize -->|canonicalize| diagram_specs
+  diagram_specs -->|render| slides
+  diagram_specs -->|narrate| script
+  normalize -->|evidence| summary
+  class repo repo
+  class docs document
+  class cloud cloud
+  class normalize service
+  class diagram_specs document
+  class slides output
+  class script output
+  class summary output
+  classDef cloud fill:#d5e7ff,stroke:#4067a8,color:#1f2937
+  classDef document fill:#f6e8c3,stroke:#8a7750,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef repo fill:#d8d8d8,stroke:#5a5a5a,color:#1f2937
+  classDef service fill:#d5ecd2,stroke:#48724b,color:#1f2937
+  %% Notes
+  %% This view is about data stages, not service boundaries.

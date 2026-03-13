@@ -1,0 +1,122 @@
+[
+  {
+    "name": "system_context",
+    "diagram_type": "system_context",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/system_context--contact-sheet.png"
+  },
+  {
+    "name": "high_level_architecture",
+    "diagram_type": "high_level_architecture",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/high_level_architecture--contact-sheet.png"
+  },
+  {
+    "name": "request_flow",
+    "diagram_type": "request_flow",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/request_flow--contact-sheet.png"
+  },
+  {
+    "name": "module_structure",
+    "diagram_type": "module_structure",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/module_structure--contact-sheet.png"
+  },
+  {
+    "name": "decision_flow",
+    "diagram_type": "decision_flow",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/decision_flow--contact-sheet.png"
+  },
+  {
+    "name": "verification_flow",
+    "diagram_type": "verification_flow",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/verification_flow--contact-sheet.png"
+  },
+  {
+    "name": "data_flow",
+    "diagram_type": "data_flow",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/data_flow--contact-sheet.png"
+  },
+  {
+    "name": "deployment",
+    "diagram_type": "deployment",
+    "style_variants": {
+      "blueprint": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--blueprint.png",
+      "broadcast": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--broadcast.png",
+      "broadcast_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--broadcast_hero.png",
+      "editorial_hero": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--editorial_hero.png",
+      "editorial_poster": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--editorial_poster.png",
+      "glass_sunset": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--glass_sunset.png",
+      "studio": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--studio.png",
+      "terminal_lime": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--terminal_lime.png"
+    },
+    "contact_sheet_path": "/Users/song/bon-git/diagram-image-poc/outputs/style_variants/deployment--contact-sheet.png"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "diagram_type": "module_structure",
+  "title": "persona-16p Module Structure",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "app",
+      "label": "app",
+      "type": "frontend",
+      "group": "runtime",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/app"
+      }
+    },
+    {
+      "id": "components",
+      "label": "components",
+      "type": "module",
+      "group": "runtime",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/components"
+      }
+    },
+    {
+      "id": "lib",
+      "label": "lib",
+      "type": "service",
+      "group": "core",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/lib"
+      }
+    },
+    {
+      "id": "data",
+      "label": "data",
+      "type": "storage",
+      "group": "content",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/data"
+      }
+    },
+    {
+      "id": "db",
+      "label": "db",
+      "type": "database",
+      "group": "content",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/db"
+      }
+    },
+    {
+      "id": "scripts",
+      "label": "scripts",
+      "type": "worker",
+      "group": "ops",
+      "metadata": {
+        "path": "/Users/song/bon-git/personality-tests/persona-16p/scripts"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "app",
+      "to": "components",
+      "label": "renders",
+      "type": "depends_on"
+    },
+    {
+      "from": "app",
+      "to": "lib",
+      "label": "uses",
+      "type": "calls"
+    },
+    {
+      "from": "app",
+      "to": "data",
+      "label": "reads",
+      "type": "reads"
+    },
+    {
+      "from": "app",
+      "to": "db",
+      "label": "queries",
+      "type": "reads"
+    },
+    {
+      "from": "components",
+      "to": "lib",
+      "label": "hooks",
+      "type": "depends_on"
+    },
+    {
+      "from": "lib",
+      "to": "db",
+      "label": "persists",
+      "type": "writes"
+    },
+    {
+      "from": "scripts",
+      "to": "db",
+      "label": "seed",
+      "type": "writes"
+    },
+    {
+      "from": "scripts",
+      "to": "data",
+      "label": "loads",
+      "type": "reads"
+    }
+  ],
+  "groups": [
+    {
+      "id": "runtime",
+      "label": "App Runtime"
+    },
+    {
+      "id": "core",
+      "label": "Core Logic"
+    },
+    {
+      "id": "content",
+      "label": "Data Assets"
+    },
+    {
+      "id": "ops",
+      "label": "Ops"
+    }
+  ],
+  "notes": [
+    "Rule-based extraction from top-level folders.",
+    "Edges express convention-based dependencies, not full static analysis."
+  ],
+  "source_refs": [
+    "/Users/song/bon-git/personality-tests/persona-16p"
+  ]
+}

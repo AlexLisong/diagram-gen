@@ -1,0 +1,118 @@
+{
+  "diagram_type": "deployment",
+  "title": "Content OS Deployment View",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "edge",
+      "label": "Edge"
+    },
+    {
+      "id": "app",
+      "label": "Application"
+    },
+    {
+      "id": "data",
+      "label": "Data"
+    },
+    {
+      "id": "external",
+      "label": "External"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "browser",
+      "label": "Creator Browser",
+      "type": "user",
+      "group": "edge",
+      "metadata": {}
+    },
+    {
+      "id": "web",
+      "label": "Frontend App",
+      "type": "frontend",
+      "group": "app",
+      "metadata": {}
+    },
+    {
+      "id": "api",
+      "label": "API Service",
+      "type": "api",
+      "group": "app",
+      "metadata": {}
+    },
+    {
+      "id": "worker",
+      "label": "Planner Worker",
+      "type": "worker",
+      "group": "app",
+      "metadata": {}
+    },
+    {
+      "id": "db",
+      "label": "Postgres",
+      "type": "database",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "storage",
+      "label": "Asset Storage",
+      "type": "storage",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "openai",
+      "label": "OpenAI API",
+      "type": "external_api",
+      "group": "external",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "browser",
+      "to": "web",
+      "label": "HTTPS",
+      "type": "http"
+    },
+    {
+      "from": "web",
+      "to": "api",
+      "label": "REST",
+      "type": "http"
+    },
+    {
+      "from": "api",
+      "to": "worker",
+      "label": "jobs",
+      "type": "triggers"
+    },
+    {
+      "from": "api",
+      "to": "db",
+      "label": "metadata",
+      "type": "writes"
+    },
+    {
+      "from": "worker",
+      "to": "storage",
+      "label": "exports",
+      "type": "stores_in"
+    },
+    {
+      "from": "worker",
+      "to": "openai",
+      "label": "LLM calls",
+      "type": "http"
+    }
+  ],
+  "notes": [
+    "POC deployment view is intentionally simplified and cloud-neutral."
+  ],
+  "source_refs": [
+    "synthetic:content_os_deployment"
+  ]
+}

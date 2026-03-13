@@ -1,0 +1,41 @@
+---
+title: Content OS Deployment View
+---
+flowchart LR
+  subgraph edge["Edge"]
+    browser([Creator Browser])
+  end
+  subgraph app["Application"]
+    web[Frontend App]
+    api[API Service]
+    worker[Planner Worker]
+  end
+  subgraph data["Data"]
+    db[(Postgres)]
+    storage[(Asset Storage)]
+  end
+  subgraph external["External"]
+    openai[OpenAI API]
+  end
+  browser -->|HTTPS| web
+  web -->|REST| api
+  api -->|jobs| worker
+  api -->|metadata| db
+  worker -->|exports| storage
+  worker -->|LLM calls| openai
+  class browser user
+  class web frontend
+  class api api
+  class worker default
+  class db database
+  class storage storage
+  class openai external
+  classDef api fill:#c9dcf6,stroke:#355c8a,color:#1f2937
+  classDef database fill:#d9d2f5,stroke:#5d4f8f,color:#1f2937
+  classDef default fill:#e5e7eb,stroke:#6b7280,color:#1f2937
+  classDef external fill:#f7c7ce,stroke:#9c4050,color:#1f2937
+  classDef frontend fill:#f8d6b5,stroke:#8a5a2b,color:#1f2937
+  classDef storage fill:#fff0bf,stroke:#927127,color:#1f2937
+  classDef user fill:#fde6b8,stroke:#8a6d3b,color:#1f2937
+  %% Notes
+  %% POC deployment view is intentionally simplified and cloud-neutral.

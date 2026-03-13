@@ -1,0 +1,127 @@
+{
+  "diagram_type": "data_flow",
+  "title": "Content OS Data Flow",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "sources",
+      "label": "Sources"
+    },
+    {
+      "id": "processing",
+      "label": "Processing"
+    },
+    {
+      "id": "artifacts",
+      "label": "Artifacts"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "repo",
+      "label": "Raw Repo Data",
+      "type": "repo",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "docs",
+      "label": "Raw Docs",
+      "type": "document",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Snapshot",
+      "type": "cloud",
+      "group": "sources",
+      "metadata": {}
+    },
+    {
+      "id": "normalize",
+      "label": "Normalized Graph",
+      "type": "service",
+      "group": "processing",
+      "metadata": {}
+    },
+    {
+      "id": "diagram_specs",
+      "label": "Diagram Specs",
+      "type": "document",
+      "group": "processing",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Slides",
+      "type": "output",
+      "group": "artifacts",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Script",
+      "type": "output",
+      "group": "artifacts",
+      "metadata": {}
+    },
+    {
+      "id": "summary",
+      "label": "Evidence Summary",
+      "type": "output",
+      "group": "artifacts",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "repo",
+      "to": "normalize",
+      "label": "extract",
+      "type": "reads"
+    },
+    {
+      "from": "docs",
+      "to": "normalize",
+      "label": "extract",
+      "type": "reads"
+    },
+    {
+      "from": "cloud",
+      "to": "normalize",
+      "label": "extract",
+      "type": "reads"
+    },
+    {
+      "from": "normalize",
+      "to": "diagram_specs",
+      "label": "canonicalize",
+      "type": "writes"
+    },
+    {
+      "from": "diagram_specs",
+      "to": "slides",
+      "label": "render",
+      "type": "writes"
+    },
+    {
+      "from": "diagram_specs",
+      "to": "script",
+      "label": "narrate",
+      "type": "writes"
+    },
+    {
+      "from": "normalize",
+      "to": "summary",
+      "label": "evidence",
+      "type": "writes"
+    }
+  ],
+  "notes": [
+    "This view is about data stages, not service boundaries."
+  ],
+  "source_refs": [
+    "synthetic:content_os_data_flow"
+  ]
+}

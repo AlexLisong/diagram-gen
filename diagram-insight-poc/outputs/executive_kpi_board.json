@@ -1,0 +1,36 @@
+{
+  "graphic_type": "kpi_board",
+  "title": "AI Support Copilot - Executive Snapshot",
+  "subtitle": "A deck-ready KPI board for an opening business slide",
+  "theme": "executive",
+  "cards": [
+    {
+      "label": "Auto-resolved tickets",
+      "value": "42%",
+      "delta": "+11 pts",
+      "note": "Quarter over quarter",
+      "accent": null
+    },
+    {
+      "label": "Median response time",
+      "value": "2.8m",
+      "delta": "-37%",
+      "note": "First human reply",
+      "accent": null
+    },
+    {
+      "label": "Agent assist usage",
+      "value": "68%",
+      "delta": "+19 pts",
+      "note": "Support team adoption",
+      "accent": null
+    },
+    {
+      "label": "CSAT uplift",
+      "value": "+9",
+      "delta": "4.6/5",
+      "note": "Pilot cohort average",
+      "accent": null
+    }
+  ]
+}

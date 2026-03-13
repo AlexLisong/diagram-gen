@@ -1,0 +1,38 @@
+{
+  "graphic_type": "funnel",
+  "title": "Presentation Funnel - Repo to Approved Slide",
+  "subtitle": "Useful when the slide needs to show drop-off or narrowing focus",
+  "theme": "newsroom",
+  "stages": [
+    {
+      "label": "Source material",
+      "value": 120,
+      "note": "Repos, docs, tickets",
+      "accent": null
+    },
+    {
+      "label": "Candidate insights",
+      "value": 56,
+      "note": "After extraction and grouping",
+      "accent": null
+    },
+    {
+      "label": "Slide-worthy ideas",
+      "value": 24,
+      "note": "Ranked by importance",
+      "accent": null
+    },
+    {
+      "label": "Approved messages",
+      "value": 9,
+      "note": "Passed review",
+      "accent": null
+    },
+    {
+      "label": "Final presentation beats",
+      "value": 4,
+      "note": "Shown to stakeholders",
+      "accent": null
+    }
+  ]
+}

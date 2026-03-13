@@ -1,0 +1,99 @@
+{
+  "diagram_type": "request_flow",
+  "title": "Repo to Slides Request Flow",
+  "direction": "TB",
+  "groups": [
+    {
+      "id": "flow",
+      "label": "Primary Path"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "select_repo",
+      "label": "Select Repo",
+      "type": "user",
+      "group": "flow",
+      "metadata": {}
+    },
+    {
+      "id": "outline",
+      "label": "Generate Outline",
+      "type": "ai_service",
+      "group": "flow",
+      "metadata": {}
+    },
+    {
+      "id": "slides",
+      "label": "Generate Slides",
+      "type": "service",
+      "group": "flow",
+      "metadata": {}
+    },
+    {
+      "id": "script",
+      "label": "Generate Script",
+      "type": "service",
+      "group": "flow",
+      "metadata": {}
+    },
+    {
+      "id": "review",
+      "label": "Review Output",
+      "type": "verifier",
+      "group": "flow",
+      "metadata": {}
+    },
+    {
+      "id": "export",
+      "label": "Export Deck",
+      "type": "output",
+      "group": "flow",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "select_repo",
+      "to": "outline",
+      "label": "brief",
+      "type": "http"
+    },
+    {
+      "from": "outline",
+      "to": "slides",
+      "label": "outline",
+      "type": "calls"
+    },
+    {
+      "from": "outline",
+      "to": "script",
+      "label": "story beats",
+      "type": "calls"
+    },
+    {
+      "from": "slides",
+      "to": "review",
+      "label": "draft slides",
+      "type": "publishes"
+    },
+    {
+      "from": "script",
+      "to": "review",
+      "label": "draft script",
+      "type": "publishes"
+    },
+    {
+      "from": "review",
+      "to": "export",
+      "label": "approved",
+      "type": "approves"
+    }
+  ],
+  "notes": [
+    "Main path only. Async or retry branches belong in sequence or decision diagrams."
+  ],
+  "source_refs": [
+    "synthetic:repo_to_slides_flow"
+  ]
+}

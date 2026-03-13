@@ -1,0 +1,37 @@
+---
+title: diagram-image-poc Module Structure
+---
+flowchart LR
+  subgraph design["Schemas"]
+    schemas[schemas]
+  end
+  subgraph ingestion["Extractors"]
+    extractors[extractors]
+  end
+  subgraph planning["Planners"]
+    planners[planners]
+  end
+  subgraph rendering["Renderers"]
+    renderers[renderers]
+  end
+  subgraph delivery["Exporters"]
+    exporters[/exporters/]
+  end
+  extractors -->|shape spec| schemas
+  planners -->|build spec| schemas
+  planners -->|source scan| extractors
+  renderers -->|render spec| schemas
+  exporters -->|emit assets| renderers
+  class schemas document
+  class extractors service
+  class planners ai
+  class renderers frontend
+  class exporters output
+  classDef ai fill:#bddfd6,stroke:#2d6a68,color:#1f2937
+  classDef document fill:#f6e8c3,stroke:#8a7750,color:#1f2937
+  classDef frontend fill:#f8d6b5,stroke:#8a5a2b,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  classDef service fill:#d5ecd2,stroke:#48724b,color:#1f2937
+  %% Notes
+  %% Rule-based extraction from top-level directories.
+  %% This is a module map, not a raw file tree dump.

@@ -1,0 +1,32 @@
+---
+title: Content OS Decision Flow
+---
+flowchart TB
+  subgraph checks["Checks"]
+    docs_ready{Docs complete?}
+    cloud_ready{Cloud snapshot ready?}
+    human_review{Human review needed?}
+  end
+  subgraph actions["Actions"]
+    draft[Generate draft]
+    request_input[/Request more input/]
+    publish[/Publish deck/]
+  end
+  docs_ready -.->|yes| cloud_ready
+  docs_ready -.->|no| request_input
+  cloud_ready -.->|yes| draft
+  cloud_ready -.->|no| request_input
+  draft -.->|confidence < 0.9| human_review
+  human_review -.->|no| publish
+  human_review -.->|yes| request_input
+  class docs_ready decision
+  class cloud_ready decision
+  class draft ai
+  class human_review decision
+  class request_input output
+  class publish output
+  classDef ai fill:#bddfd6,stroke:#2d6a68,color:#1f2937
+  classDef decision fill:#fff2cc,stroke:#9c7a00,color:#1f2937
+  classDef output fill:#fce5cd,stroke:#9b5f1b,color:#1f2937
+  %% Notes
+  %% Decision diagrams stay useful only when branches remain shallow and legible.

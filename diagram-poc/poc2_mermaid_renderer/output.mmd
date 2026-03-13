@@ -1,0 +1,23 @@
+flowchart LR
+
+  subgraph client[Client Layer]
+    user(User)
+    frontend(React Frontend)
+  end
+
+  subgraph backend[Backend Layer]
+    api[C# Backend]
+    ai[Python AI Service]
+  end
+
+  subgraph data[Data Layer]
+    db[(SQL Server)]
+    redis[(Redis Cache)]
+  end
+
+  user -->|Browser| frontend
+  frontend -->|REST API| api
+  api -->|AI Request| ai
+  ai -.->|SSE Stream| frontend
+  api -->|SQL| db
+  api -->|Cache| redis

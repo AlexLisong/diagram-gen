@@ -1,0 +1,14 @@
+flowchart LR
+
+  react(React UI)
+  copilot(CopilotKit)
+  csharp[C# API]
+  python[Python Agent]
+  openai>OpenAI GPT-4]
+
+  react -->|Action| copilot
+  copilot -->|HTTP| csharp
+  csharp -->|Forward| python
+  python -->|LLM Call| openai
+  python -.->|Events| csharp
+  csharp -.->|SSE| react

@@ -1,0 +1,88 @@
+{
+  "diagram_type": "sequence",
+  "title": "Repo to Slides Streaming Sequence",
+  "participants": [
+    {
+      "id": "user",
+      "label": "Creator",
+      "type": "actor"
+    },
+    {
+      "id": "ui",
+      "label": "Frontend",
+      "type": "frontend"
+    },
+    {
+      "id": "api",
+      "label": "Gateway API",
+      "type": "service"
+    },
+    {
+      "id": "agent",
+      "label": "Planner Agent",
+      "type": "service"
+    },
+    {
+      "id": "renderer",
+      "label": "Diagram Renderer",
+      "type": "service"
+    }
+  ],
+  "steps": [
+    {
+      "from": "user",
+      "to": "ui",
+      "message": "Select repo",
+      "style": "solid",
+      "kind": "request"
+    },
+    {
+      "from": "ui",
+      "to": "api",
+      "message": "POST /projects/{repo}",
+      "style": "solid",
+      "kind": "request"
+    },
+    {
+      "from": "api",
+      "to": "agent",
+      "message": "Build outline",
+      "style": "solid",
+      "kind": "request"
+    },
+    {
+      "from": "agent",
+      "to": "renderer",
+      "message": "Render graph DSL",
+      "style": "solid",
+      "kind": "async"
+    },
+    {
+      "from": "renderer",
+      "to": "agent",
+      "message": "Mermaid assets",
+      "style": "solid",
+      "kind": "response"
+    },
+    {
+      "from": "agent",
+      "to": "api",
+      "message": "Stream status",
+      "style": "solid",
+      "kind": "stream"
+    },
+    {
+      "from": "api",
+      "to": "ui",
+      "message": "SSE updates",
+      "style": "solid",
+      "kind": "stream"
+    }
+  ],
+  "notes": [
+    "Sequence POC stays under 5 participants to avoid unreadable output."
+  ],
+  "source_refs": [
+    "synthetic:streaming_sequence"
+  ]
+}

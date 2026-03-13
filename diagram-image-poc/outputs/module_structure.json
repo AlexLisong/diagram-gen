@@ -1,0 +1,113 @@
+{
+  "diagram_type": "module_structure",
+  "title": "diagram-image-poc Module Structure",
+  "direction": "LR",
+  "groups": [
+    {
+      "id": "design",
+      "label": "Schemas"
+    },
+    {
+      "id": "ingestion",
+      "label": "Extractors"
+    },
+    {
+      "id": "planning",
+      "label": "Planners"
+    },
+    {
+      "id": "rendering",
+      "label": "Renderers"
+    },
+    {
+      "id": "delivery",
+      "label": "Exporters"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "schemas",
+      "label": "schemas",
+      "type": "document",
+      "group": "design",
+      "metadata": {
+        "path": "/Users/song/bon-git/diagram-image-poc/schemas"
+      }
+    },
+    {
+      "id": "extractors",
+      "label": "extractors",
+      "type": "service",
+      "group": "ingestion",
+      "metadata": {
+        "path": "/Users/song/bon-git/diagram-image-poc/extractors"
+      }
+    },
+    {
+      "id": "planners",
+      "label": "planners",
+      "type": "ai_service",
+      "group": "planning",
+      "metadata": {
+        "path": "/Users/song/bon-git/diagram-image-poc/planners"
+      }
+    },
+    {
+      "id": "renderers",
+      "label": "renderers",
+      "type": "frontend",
+      "group": "rendering",
+      "metadata": {
+        "path": "/Users/song/bon-git/diagram-image-poc/renderers"
+      }
+    },
+    {
+      "id": "exporters",
+      "label": "exporters",
+      "type": "output",
+      "group": "delivery",
+      "metadata": {
+        "path": "/Users/song/bon-git/diagram-image-poc/exporters"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "extractors",
+      "to": "schemas",
+      "label": "shape spec",
+      "type": "depends_on"
+    },
+    {
+      "from": "planners",
+      "to": "schemas",
+      "label": "build spec",
+      "type": "depends_on"
+    },
+    {
+      "from": "planners",
+      "to": "extractors",
+      "label": "source scan",
+      "type": "calls"
+    },
+    {
+      "from": "renderers",
+      "to": "schemas",
+      "label": "render spec",
+      "type": "depends_on"
+    },
+    {
+      "from": "exporters",
+      "to": "renderers",
+      "label": "emit assets",
+      "type": "calls"
+    }
+  ],
+  "notes": [
+    "Rule-based extraction from top-level directories.",
+    "This is a module map, not a raw file tree dump."
+  ],
+  "source_refs": [
+    "/Users/song/bon-git/diagram-image-poc"
+  ]
+}

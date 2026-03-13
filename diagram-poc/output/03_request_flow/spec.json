@@ -1,0 +1,83 @@
+{
+  "diagram_type": "request_flow",
+  "title": "AI Copilot Chat Request Flow",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "react",
+      "label": "React UI",
+      "type": "frontend",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "copilot",
+      "label": "CopilotKit",
+      "type": "frontend",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "csharp",
+      "label": "C# Gateway",
+      "type": "api",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "python",
+      "label": "Python Agent",
+      "type": "ai_service",
+      "group": null,
+      "metadata": {}
+    },
+    {
+      "id": "openai",
+      "label": "OpenAI GPT-4",
+      "type": "external_api",
+      "group": null,
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "react",
+      "to": "copilot",
+      "label": "Action",
+      "type": "calls"
+    },
+    {
+      "from": "copilot",
+      "to": "csharp",
+      "label": "POST /chat",
+      "type": "http"
+    },
+    {
+      "from": "csharp",
+      "to": "python",
+      "label": "Forward",
+      "type": "internal_http"
+    },
+    {
+      "from": "python",
+      "to": "openai",
+      "label": "LLM Call",
+      "type": "http"
+    },
+    {
+      "from": "python",
+      "to": "csharp",
+      "label": "MetaEvents",
+      "type": "stream"
+    },
+    {
+      "from": "csharp",
+      "to": "react",
+      "label": "SSE",
+      "type": "stream"
+    }
+  ],
+  "groups": [],
+  "legend": false,
+  "notes": []
+}

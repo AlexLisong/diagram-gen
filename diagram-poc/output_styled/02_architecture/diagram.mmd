@@ -1,0 +1,28 @@
+flowchart LR
+
+  subgraph pipeline[Ingestion Pipeline]
+    ingestion[Repo Ingestion]
+    graph_builder[Graph Builder]
+    planner[Content Planner]
+  end
+
+  subgraph generators[Content Generators]
+    slides[Slide Generator]
+    script[Script Writer]
+    diagrams[Diagram Engine]
+  end
+
+  subgraph quality[Quality Gate]
+    verifier{Verifier}
+    exporter[Exporter]
+  end
+
+  ingestion -->|Raw Data| graph_builder
+  graph_builder -->|Graph| planner
+  planner -->|Outline| slides
+  planner -->|Outline| script
+  planner -->|Specs| diagrams
+  slides -->|Draft| verifier
+  script -->|Draft| verifier
+  diagrams -->|Images| verifier
+  verifier -->|Approved| exporter

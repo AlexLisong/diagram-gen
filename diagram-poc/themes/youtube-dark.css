@@ -1,0 +1,7 @@
+/* YouTube tech channel dark theme */
+* { font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif !important; }
+.node rect, .node polygon, .node circle { rx: 8; ry: 8; }
+.cluster rect { rx: 12; ry: 12; }
+.edgeLabel { font-size: 13px; font-weight: 500; }
+.nodeLabel { font-size: 14px; font-weight: 600; }
+.cluster-label .nodeLabel { font-size: 13px; font-weight: 700; }

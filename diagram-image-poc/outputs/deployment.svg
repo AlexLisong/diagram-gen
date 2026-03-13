@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1208" height="466" viewBox="0 0 1208 466">
+  <rect width="1208" height="466" fill="#f5f1ea" />
+  <text x="44" y="38" font-size="28" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Content OS Deployment View</text>
+  <rect x="44" y="122" width="226" height="126" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="60" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Edge</text>
+  <rect x="342" y="122" width="226" height="314" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="358" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Application</text>
+  <rect x="640" y="122" width="226" height="220" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="656" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">Data</text>
+  <rect x="938" y="122" width="226" height="126" rx="16" fill="#e9dfd0" stroke="#b9a487" stroke-width="2" />
+  <text x="954" y="146" font-size="16" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="600">External</text>
+  <line x1="252" y1="194" x2="360" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="360,194 351.90,197.91 351.90,190.09" fill="#6b7280" />
+  <text x="306.0" y="186.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">HTTPS</text>
+  <line x1="550" y1="194" x2="360" y2="288" stroke="#6b7280" stroke-width="2" />
+  <polygon points="360,288 365.53,280.90 369.00,287.92" fill="#6b7280" />
+  <text x="455.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">REST</text>
+  <line x1="550" y1="288" x2="360" y2="382" stroke="#6b7280" stroke-width="2" />
+  <polygon points="360,382 365.53,374.90 369.00,381.92" fill="#6b7280" />
+  <text x="455.0" y="327.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">jobs</text>
+  <line x1="550" y1="288" x2="658" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="658,194 654.46,202.27 649.32,196.37" fill="#6b7280" />
+  <text x="604.0" y="233.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">metadata</text>
+  <line x1="550" y1="382" x2="658" y2="288" stroke="#6b7280" stroke-width="2" />
+  <polygon points="658,288 654.46,296.27 649.32,290.37" fill="#6b7280" />
+  <text x="604.0" y="327.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">exports</text>
+  <line x1="550" y1="382" x2="956" y2="194" stroke="#6b7280" stroke-width="2" />
+  <polygon points="956,194 950.29,200.96 947.00,193.85" fill="#6b7280" />
+  <text x="753.0" y="280.0" text-anchor="middle" font-size="12" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">LLM calls</text>
+  <rect x="62" y="160" width="190" height="68" rx="14" fill="#fde6b8" stroke="#243447" stroke-width="2" />
+  <text x="76" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Creator Browser</text>
+  <text x="76" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">user</text>
+  <rect x="360" y="160" width="190" height="68" rx="14" fill="#f8d6b5" stroke="#243447" stroke-width="2" />
+  <text x="374" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Frontend App</text>
+  <text x="374" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">frontend</text>
+  <rect x="360" y="254" width="190" height="68" rx="14" fill="#c9dcf6" stroke="#243447" stroke-width="2" />
+  <text x="374" y="280" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">API Service</text>
+  <text x="374" y="302" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">api</text>
+  <rect x="360" y="348" width="190" height="68" rx="14" fill="#dce7ef" stroke="#243447" stroke-width="2" />
+  <text x="374" y="374" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Planner Worker</text>
+  <text x="374" y="396" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">worker</text>
+  <rect x="658" y="160" width="190" height="68" rx="14" fill="#d9d2f5" stroke="#243447" stroke-width="2" />
+  <text x="672" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Postgres</text>
+  <text x="672" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">database</text>
+  <rect x="658" y="254" width="190" height="68" rx="14" fill="#fff0bf" stroke="#243447" stroke-width="2" />
+  <text x="672" y="280" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">Asset Storage</text>
+  <text x="672" y="302" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">storage</text>
+  <rect x="956" y="160" width="190" height="68" rx="14" fill="#f7c7ce" stroke="#243447" stroke-width="2" />
+  <text x="970" y="186" font-size="15" font-family="Helvetica, Arial, sans-serif" fill="#1f2937" font-weight="700">OpenAI API</text>
+  <text x="970" y="208" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">external api</text>
+  <text x="44" y="452" font-size="11" font-family="Helvetica, Arial, sans-serif" fill="#5b6470">POC deployment view is intentionally simplified and cloud-neutral.</text>
+</svg>

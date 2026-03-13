@@ -1,0 +1,25 @@
+flowchart TB
+
+  subgraph external[External]
+    ibkr>Interactive Brokers]
+  end
+
+  subgraph pipeline[Data Pipeline]
+    fetcher[Data Fetcher]
+    engine[Trendline Engine]
+  end
+
+  subgraph data[Storage]
+    pg[(PostgreSQL)]
+  end
+
+  subgraph app[Application]
+    backend[C# Backend]
+    frontend(Next.js Frontend)
+  end
+
+  ibkr -->|Market Data| fetcher
+  fetcher -->|Store| pg
+  pg -->|Read| engine
+  engine -->|Analysis| backend
+  backend -->|REST| frontend

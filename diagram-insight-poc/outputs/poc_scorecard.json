@@ -1,0 +1,59 @@
+{
+  "graphic_type": "scorecard",
+  "title": "POC Comparison Scorecard",
+  "subtitle": "A presentation slide to compare the three tracks in this repo",
+  "theme": "newsroom",
+  "columns": [
+    {
+      "key": "diagram_poc",
+      "label": "diagram-poc"
+    },
+    {
+      "key": "image_poc",
+      "label": "diagram-image-poc"
+    },
+    {
+      "key": "insight_poc",
+      "label": "diagram-insight-poc"
+    }
+  ],
+  "rows": [
+    {
+      "criterion": "Image quality",
+      "scores": {
+        "diagram_poc": 3,
+        "image_poc": 5,
+        "insight_poc": 4
+      },
+      "note": "SVG-first quality still leads"
+    },
+    {
+      "criterion": "Visual diversity",
+      "scores": {
+        "diagram_poc": 5,
+        "image_poc": 4,
+        "insight_poc": 5
+      },
+      "note": "Insight graphics broaden deck shapes"
+    },
+    {
+      "criterion": "Technical diagrams",
+      "scores": {
+        "diagram_poc": 5,
+        "image_poc": 4,
+        "insight_poc": 2
+      },
+      "note": "Still strongest in the original POCs"
+    },
+    {
+      "criterion": "Presentation readiness",
+      "scores": {
+        "diagram_poc": 3,
+        "image_poc": 4,
+        "insight_poc": 5
+      },
+      "note": "Designed for slide storytelling"
+    }
+  ],
+  "scale_max": 5
+}

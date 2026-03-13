@@ -1,0 +1,27 @@
+flowchart TB
+
+  start([Start])
+  has_repo{Repo available?}
+  scan_repo[Scan Repo]
+  manual_input[Manual Input]
+  has_docs{Docs complete?}
+  enrich[Enrich with LLM]
+  build_graph[Build Graph]
+  quality_ok{Quality gate?}
+  generate[Generate Assets]
+  review[Human Review]
+  done([Export])
+
+  start --> has_repo
+  has_repo -->|Yes| scan_repo
+  has_repo -.->|No| manual_input
+  scan_repo --> has_docs
+  manual_input --> has_docs
+  has_docs -->|Yes| build_graph
+  has_docs -.->|No| enrich
+  enrich --> build_graph
+  build_graph --> quality_ok
+  quality_ok -->|Pass| generate
+  quality_ok -.->|Fail| review
+  review -.->|Retry| build_graph
+  generate --> done

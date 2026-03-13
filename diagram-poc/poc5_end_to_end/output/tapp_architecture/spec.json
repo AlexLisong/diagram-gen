@@ -1,0 +1,120 @@
+{
+  "diagram_type": "system_architecture",
+  "title": "Tapp AI Copilot Architecture",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "user",
+      "label": "User",
+      "type": "user",
+      "group": "client",
+      "metadata": {}
+    },
+    {
+      "id": "frontend",
+      "label": "React Frontend",
+      "type": "frontend",
+      "group": "client",
+      "metadata": {
+        "tech": [
+          "React",
+          "TypeScript",
+          "CopilotKit"
+        ]
+      }
+    },
+    {
+      "id": "api",
+      "label": "C# Backend",
+      "type": "api",
+      "group": "backend",
+      "metadata": {
+        "tech": [
+          ".NET",
+          "ABP"
+        ]
+      }
+    },
+    {
+      "id": "ai",
+      "label": "Python AI Service",
+      "type": "ai_service",
+      "group": "backend",
+      "metadata": {
+        "tech": [
+          "FastAPI",
+          "LangChain",
+          "OpenAI"
+        ]
+      }
+    },
+    {
+      "id": "db",
+      "label": "SQL Server",
+      "type": "database",
+      "group": "data",
+      "metadata": {}
+    },
+    {
+      "id": "pdf",
+      "label": "PDF Generator",
+      "type": "service",
+      "group": "backend",
+      "metadata": {}
+    }
+  ],
+  "edges": [
+    {
+      "from": "user",
+      "to": "frontend",
+      "label": "Browser",
+      "type": "http"
+    },
+    {
+      "from": "frontend",
+      "to": "api",
+      "label": "REST",
+      "type": "http"
+    },
+    {
+      "from": "api",
+      "to": "ai",
+      "label": "AI Request",
+      "type": "internal_http"
+    },
+    {
+      "from": "ai",
+      "to": "frontend",
+      "label": "SSE",
+      "type": "stream"
+    },
+    {
+      "from": "api",
+      "to": "db",
+      "label": "SQL",
+      "type": "reads"
+    },
+    {
+      "from": "api",
+      "to": "pdf",
+      "label": "Generate",
+      "type": "calls"
+    }
+  ],
+  "groups": [
+    {
+      "id": "client",
+      "label": "Client Layer"
+    },
+    {
+      "id": "backend",
+      "label": "Backend Layer"
+    },
+    {
+      "id": "data",
+      "label": "Data Layer"
+    }
+  ],
+  "legend": false,
+  "notes": []
+}

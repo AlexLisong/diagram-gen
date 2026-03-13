@@ -1,0 +1,18 @@
+@startuml
+skinparam Shadowing false
+skinparam DefaultFontName Helvetica
+title Repo to Slides Streaming Sequence
+actor "Creator" as user
+participant "Frontend" as ui
+participant "Gateway API" as api
+participant "Planner Agent" as agent
+participant "Diagram Renderer" as renderer
+user -> ui: Select repo
+ui -> api: POST /projects/{repo}
+api -> agent: Build outline
+agent ->> renderer: Render graph DSL
+renderer --> agent: Mermaid assets
+agent -->> api: Stream status
+api -->> ui: SSE updates
+note over user: Sequence POC stays under 5 participants to avoid unreadable output.
+@enduml

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Manual vs AI-Assisted Video Prep</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f2f5; padding: 2rem; }
+    .container { max-width: 960px; margin: 0 auto; }
+    h1 { text-align: center; color: #1a1a2e; font-size: 1.6rem; margin-bottom: 2rem; }
+    .comparison { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: stretch; }
+    .side { padding: 2rem; border-radius: 12px; }
+    .side h2 { font-size: 1.2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid; }
+    .side ul { list-style: none; }
+    .side li { padding: 0.6rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .side li::before { display: inline-block; width: 1.5rem; }
+    .left { background: #fff0f0; }
+    .left h2 { color: #c0392b; border-color: #e74c3c; }
+    .left li::before { content: "✗ "; color: #e74c3c; }
+    .right { background: #f0fff4; }
+    .right h2 { color: #27ae60; border-color: #2ecc71; }
+    .right li::before { content: "✓ "; color: #2ecc71; }
+    .arrow { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #7f8c8d; }
+    .notes { margin-top: 2rem; padding: 1.5rem; background: #fff; border-radius: 12px;
+              border-left: 4px solid #3498db; }
+    .notes h3 { color: #2c3e50; font-size: 1rem; margin-bottom: 0.8rem; }
+    .notes li { font-size: 0.9rem; padding: 0.3rem 0; color: #555; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manual vs AI-Assisted Video Prep</h1>
+    <div class="comparison">
+      <div class="side left">
+        <h2>Before (Manual)</h2>
+        <ul>
+        <li>Read entire repo manually (2-4 hours)</li>
+        <li>Write slide deck from scratch (3-5 hours)</li>
+        <li>Draw diagrams in Figma/PPT (1-2 hours)</li>
+        <li>Write script manually (2-3 hours)</li>
+        <li>No fact-checking against source</li>
+        <li>Inconsistent quality across videos</li>
+        </ul>
+      </div>
+      <div class="arrow">→</div>
+      <div class="side right">
+        <h2>After (Content OS)</h2>
+        <ul>
+        <li>Auto-ingest repo + cloud (minutes)</li>
+        <li>Auto-generate slide outline + draft</li>
+        <li>Auto-generate verified diagrams</li>
+        <li>Auto-generate teleprompter script</li>
+        <li>Every claim traced to source code</li>
+        <li>Consistent structure + quality</li>
+        </ul>
+      </div>
+    </div>
+    <div class="notes">
+      <h3>Key Improvements</h3>
+      <ul>
+      <li>10x faster prep time: 8-14 hours → under 1 hour</li>
+      <li>Every diagram is deterministic and editable</li>
+      <li>Every claim is source-verified, not hallucinated</li>
+      <li>System scales to any repo, not just ones you know well</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
